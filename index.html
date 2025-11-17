@@ -1,22 +1,28 @@
 <html>
-<head>
-  <title>Ilmaiset harrastuksien kokeilukerrat Helsingissä</title>
-</head>
-<body>
-  <h1>Ilmaiset kokeilut Helsingissä</h1>
-  <p>Tämä lista päivittyy automaattisesti maanantaisin tekoälyn avulla.</p>
-  <script>
-    fetch('/data/offers.json')
-      .then(r => r.json())
-      .then(data => {
-        const ul = document.createElement('ul');
-        data.forEach(o => {
-          const li = document.createElement('li');
-          li.innerHTML = `<strong>${o.name}</strong> – ${o.offer_type} (${o.city_district})`;
-          ul.appendChild(li);
+  <head>
+    <title>Ilmaiset kokeilut Helsingissä</title>
+  </head>
+  <body>
+    <h1>Ilmaiset kokeilut Helsingissä</h1>
+    <p>Tämä lista päivittyy automaattisesti maanantaisin tekoälyn avulla.</p>
+
+    <script>
+      fetch('/data/offers.json')
+        .then(r => r.json())
+        .then(data => {
+          const ul = document.createElement('ul');
+          data.forEach(o => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${o.name}</strong> – ${o.offer_type} (${o.city_district})`;
+            ul.appendChild(li);
+          });
+          document.body.appendChild(ul);
         });
-        document.body.appendChild(ul);
-      });
-  </script>
-</body>
+    </script>
+
+    <hr>
+    <p style="font-size: 0.9em; color: gray;">
+      Tiedot on koottu julkisista lähteistä. Tarkista aina ajantasaiset ehdot palveluntarjoajan sivulta.
+    </p>
+  </body>
 </html>

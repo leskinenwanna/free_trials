@@ -8,23 +8,23 @@ from openai import OpenAI
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 BRAVE_KEY = os.getenv("BRAVE_API_KEY")
 
-# Hakulausekkeet Brave-hausta
+
 SEARCH_QUERIES = [
-    "kokeile ilmaiseksi helsinki",
     "ilmainen kokeilukerta helsinki",
-    "kokeile maksutta helsinki",
-    "helsinki harrastus kokeilu",
     "ilmainen treeni helsinki",
-    "ilmainen tanssitunti helsinki",
-    "free trial helsinki",
+    "tutustumiskerta ilmaiseksi helsinki",
+    "helsinki ilmainen harrastus kokeilu",
+    "kokeile tanssia maksutta helsinki",
+    "free trial gym helsinki",
 ]
 
+
 def brave_search(query):
-    """Hakee Brave Search API:lla listan sivustoja."""
     headers = {"X-Subscription-Token": BRAVE_KEY}
     params = {"q": query, "count": 20, "search_lang": "fi"}
     r = requests.get("https://api.search.brave.com/res/v1/web/search",
-                     headers=headers, params=params)
+                     headers=headers,
+                     params=params)
     try:
         results = r.json().get("web", {}).get("results", [])
         return [item["url"] for item in results]
@@ -33,72 +33,84 @@ def brave_search(query):
 
 
 def fetch_page_text(url):
-    """Lataa nettisivun ja palauttaa raakatekstin."""
+    """Return much more page text than before."""
     try:
-        html = requests.get(url, timeout=15).text
+        html = requests.get(url, timeout=25).text
         soup = BeautifulSoup(html, "html.parser")
-        return soup.get_text(" ", strip=True)
+
+        # Try to keep text readable
+        texts = soup.find_all(text=True)
+        visible_texts = []
+        for t in texts:
+            if t.parent.name not in ["script", "style", "meta", "noscript"]:
+                visible_texts.append(t.strip())
+
+        full_text = " ".join(visible_texts)
+        return full_text[:15000]  # increase to 15000 chars
     except Exception:
         return ""
 
 
 def ai_judgement(text, url):
     """
-    Pyytää OpenAI:ta arvioimaan, tarjoaako sivu
-    ilmaisen kokeilukerran helsinkiläiseen harrastukseen.
+    Ask AI again, but with a more forgiving prompt.
     """
     prompt = f"""
-Analysoi tämä sivun teksti ja URL:
-URL: {url}
+Analysoi tämä sivun teksti ja URL: {url}
 
-Vastaa täsmällisesti:
-1. Onko sivulla tarjolla ilmainen kokeilukerta, ilmainen treeni, ilmainen kokeilujakso,
-   maksuton tutustumiskerta TAI muu kokeilu harrastus-, hyvinvointi-, tanssi- tai liikuntapalveluun?
-2. Onko se nimenomaan Helsingissä TAI verkossa koko Suomea varten (esim. FeelHobby tyyppiset sivut)?
-3. Jos vastaus on kyllä, kerro lyhyesti miksi.
+Etsi nimenomaan:
+- ilmainen kokeilukerta
+- ilmainen treeni
+- kokeile maksutta
+- free trial
+- tutustuminen ilmaiseksi
+- ensimmäinen treeni maksutta
+- free class for new members
 
-Vastaa muodossa:
+Jos sivu SELVÄSTI tarjoaa ilmaisen kokeilukerran harrastukseen, hyvinvointiin,
+liikuntaan, tanssiin, joogaan, salille tai muuhun aktiviteettiin Helsingissä
+tai koko Suomessa verkossa:
+
+Vastaa:
 KYLLÄ – selitys
-TAI
+
+Muuten:
 EI – selitys
 
-Teksti:
-{text[:5000]}
+Tässä sivun teksti:
+{text}
 """
 
     resp = client.responses.create(
         model="gpt-4.1",
         input=prompt
     )
-    answer = resp.output_text.strip().lower()
-    return answer
+    return resp.output_text.strip().lower()
 
 
 def main():
     offers = []
-    seen_urls = set()
+    seen = set()
 
-    # 1) BRAVE-HAKU – löydä sivustot
-    for query in SEARCH_QUERIES:
-        urls = brave_search(query)
-        for url in urls:
-            if url not in seen_urls:
-                seen_urls.add(url)
+    # Gather URLs
+    for q in SEARCH_QUERIES:
+        for url in brave_search(q):
+            if url not in seen:
+                seen.add(url)
 
-    print(f"Löytyi yhteensä {len(seen_urls)} URLia Brave-haulla.")
+    print(f"Löytyi yhteensä {len(seen)} URLia Brave-haulla.")
 
-    # 2) ANALYSOI JOKAINEN SIVU AI:LLA
-    for url in list(seen_urls)[:20]:
+    # AI only for the first 20 URLs to save money
+    for url in list(seen)[:20]:
         text = fetch_page_text(url)
         if not text:
             continue
 
         answer = ai_judgement(text, url)
 
-        # OpenAI vastaa muodossa: "kyllä – …"
         if answer.startswith("kyllä"):
             offers.append({
-                "name": url.split("//")[1].split("/")[0],  # domain
+                "name": url.split("//")[1].split("/")[0],
                 "website": url,
                 "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
                 "city": "Helsinki tai online",
@@ -106,7 +118,6 @@ def main():
                 "last_checked": str(date.today())
             })
 
-    # 3) KIRJOITA TIEDOSTO
     with open("data/offers.json", "w", encoding="utf-8") as f:
         json.dump(offers, f, ensure_ascii=False, indent=2)
 
@@ -115,3 +126,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

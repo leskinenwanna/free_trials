@@ -88,7 +88,7 @@ def main():
     print(f"Löytyi yhteensä {len(seen_urls)} URLia Brave-haulla.")
 
     # 2) ANALYSOI JOKAINEN SIVU AI:LLA
-    for url in seen_urls:
+    for url in list(seen_urls)[:20]:
         text = fetch_page_text(url)
         if not text:
             continue

@@ -1,9 +1,9 @@
 [
   {
-    "name": "www.unisport.fi",
-    "website": "https://www.unisport.fi/fi/ilmainen-tutustumiskaynti",
+    "name": "www.hypoxi.fi",
+    "website": "https://www.hypoxi.fi/varaa-maksuton-kokeilukerta/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys\n\nsivulla https://www.unisport.fi/fi/ilmainen-tutustumiskaynti sanotaan selkeästi:  \n\"ensimmäinen treeni uusille asiakkaille on ilmainen. kampanjakoodilla 'freevisit' voit lunastaa ensimmäisen ilmaisen kertakäynnin, jolla pääset tutustumaan unisportin liikuntakeskuksiin.\"\n\n**tämä tarkoittaa, että uusi asiakas saa ilmaiseksi yhden kerran kokeilla unisportin liikuntakeskuksen (kuntosali ym.) palveluita helsingissä/otaniemessä yms.**  \nsivu siis tarjoaa ilmaisen kokeilukerran liikuntaan/hyvinvointiin helsingin unisport-keskuksissa.\n\nosumat hakusanoihin:\n- ilmainen kokeilukerta: kyllä, käytännössä näin\n- ilmainen treeni: kyllä (\"ensimmäinen treeni uusille asiakkaille on ilmainen\")\n- kokeile maksutta: kyllä\n- free trial: kyllä (\"ensimmäinen ilmainen kertakäynti\" kampanjakoodilla)\n- tutustuminen ilmaiseksi: kyllä (ilmainen tutustumiskäynti)\n- ensimmäinen treeni maksutta: kyllä\n- free class for new members: kyllä, kuntosalille/ryhmätunnille pääsee ilmaiseksi kertakäynnillä\n\n**yhteenveto:**  \nkyllä – sivu tarjoaa selvästi ilmaisen kokeilukerran liikunta-/hyvinvointiharrastukseen helsingissä unisportin keskuksissa.",
+    "ai_comment": "kyllä – selitys:\n\nsivulla https://www.hypoxi.fi/varaa-maksuton-kokeilukerta/ tarjotaan nimenomaan **ilmaista kokeilukertaa** hypoxi-hyvinvointimenetelmään (\"varaa aikasi maksuttomaan kokeilukertaan, joka sisältää laitekokeilun\"). hypoxi kohdistuu hyvinvointiin, liikuntaan sekä kevyen rasvanpolttoliikunnan testaamiseen, ja helsingissä on useita studioita (esim. helsinki aleksi, herttoniemi, jätkäsaari, meilahti).\n\nsivun teksti täyttää siis haun ehdot: se tarjoaa ilmaisen testikerran liikunta- ja hyvinvointipalvelussa helsingissä. ilmaiselle kokeilukerralle voi varata ajan, ja palvelu sopii liikunta-aktiviteettiin (kuntopyöräilyä sisältävä kevyt rasvanpolttoliikunta).",
     "last_checked": "2025-11-18"
   }
 ]

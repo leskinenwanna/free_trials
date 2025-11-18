@@ -66,10 +66,10 @@ Etsi nimenomaan:
 - tutustuminen ilmaiseksi
 - ensimmäinen treeni maksutta
 - free class for new members
+- kokeile ilmaiseksi
 
-Jos sivu SELVÄSTI tarjoaa ilmaisen kokeilukerran harrastukseen, hyvinvointiin,
-liikuntaan, tanssiin, joogaan, salille tai muuhun aktiviteettiin Helsingissä
-tai koko Suomessa verkossa:
+Jos sivu tarjoaa ilmaisen kokeilukerran harrastukseen, hyvinvointiin,
+liikuntaan, tanssiin, joogaan, salille, koripalloon tai muuhun aktiviteettiin Helsingissä:
 
 Vastaa:
 KYLLÄ – selitys
@@ -100,8 +100,8 @@ def main():
 
     print(f"Löytyi yhteensä {len(seen)} URLia Brave-haulla.")
 
-    # AI only for the first 20 URLs to save money
-    for url in list(seen)[:20]:
+    # AI only for the first 75 URLs to save money
+    for url in list(seen)[:75]:
         text = fetch_page_text(url)
         if not text:
             continue
@@ -113,7 +113,6 @@ def main():
                 "name": url.split("//")[1].split("/")[0],
                 "website": url,
                 "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-                "city": "Helsinki tai online",
                 "ai_comment": answer,
                 "last_checked": str(date.today())
             })

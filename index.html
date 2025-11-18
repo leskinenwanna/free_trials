@@ -13,7 +13,7 @@
           const ul = document.createElement('ul');
           data.forEach(o => {
             const li = document.createElement('li');
-            li.innerHTML = `<strong>${o.name}</strong> – ${o.offer_type} (${o.city_district})`;
+            li.innerHTML = `<strong>${o.name}</strong> – ${o.offer_type} – <a href="${o.website}" target="_blank">${o.website}</a>`;
             ul.appendChild(li);
           });
           document.body.appendChild(ul);

@@ -1,9 +1,30 @@
 [
   {
-    "name": "www.hypoxi.fi",
-    "website": "https://www.hypoxi.fi/varaa-maksuton-kokeilukerta/",
+    "name": "www.unisport.fi",
+    "website": "https://www.unisport.fi/fi/ilmainen-tutustumiskaynti",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys:\n\nsivulla https://www.hypoxi.fi/varaa-maksuton-kokeilukerta/ tarjotaan nimenomaan **ilmaista kokeilukertaa** hypoxi-hyvinvointimenetelmään (\"varaa aikasi maksuttomaan kokeilukertaan, joka sisältää laitekokeilun\"). hypoxi kohdistuu hyvinvointiin, liikuntaan sekä kevyen rasvanpolttoliikunnan testaamiseen, ja helsingissä on useita studioita (esim. helsinki aleksi, herttoniemi, jätkäsaari, meilahti).\n\nsivun teksti täyttää siis haun ehdot: se tarjoaa ilmaisen testikerran liikunta- ja hyvinvointipalvelussa helsingissä. ilmaiselle kokeilukerralle voi varata ajan, ja palvelu sopii liikunta-aktiviteettiin (kuntopyöräilyä sisältävä kevyt rasvanpolttoliikunta).",
-    "last_checked": "2025-11-18"
+    "ai_comment": "kyllä – selitys\n\nsivu https://www.unisport.fi/fi/ilmainen-tutustumiskaynti tarjoaa ilmaisen kokeilukerran unisportin liikuntakeskuksissa helsingissä. sivulla lukee:  \n**\"ensimmäinen treeni uusille asiakkaille on ilmainen. kampanjakoodilla 'freevisit' voit lunastaa ensimmäisen ilmaisen kertakäynnin, jolla pääset tutustumaan unisportin liikuntakeskuksiin.\"**\n\ntämä täyttää seuraavat hakemasi ehdot:\n- ilmainen kokeilukerta\n- ilmainen treeni\n- kokeile maksutta\n- free trial (ilmainen kertakäynti uusille asiakkaille)\n- tutustuminen ilmaiseksi\n- ensimmäinen treeni maksutta\n- kokeile ilmaiseksi\n\npalvelu liittyy harrastukseen, hyvinvointiin, liikuntaan ja treeniin helsingissä unisportin saleilla ja liikuntakeskuksissa.",
+    "last_checked": "2025-11-19"
+  },
+  {
+    "name": "tfwstadi.com",
+    "website": "https://tfwstadi.com/",
+    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+    "ai_comment": "kyllä – selitys\n\nsivulta https://tfwstadi.com löytyy selkeästi maininta \"varaa ilmainen kokeilutunti\" ja tekstissä toistuu useaan kertaan mahdollisuus varata ilmainen kokeilutunti (tai ilmainen kokeilutunti ennen ostopäätöstä). palvelu liittyy toiminnalliseen treeniin, jonka sijainti on helsingin kampissa. näin ollen sivusto tarjoaa ilmaisen kokeilukerran liikuntaharrastukseen helsingissä.",
+    "last_checked": "2025-11-19"
+  },
+  {
+    "name": "www.danceart.fi",
+    "website": "http://www.danceart.fi/etusivu/",
+    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+    "ai_comment": "kyllä – selitys\n\nsivulta http://www.danceart.fi/etusivu/ löytyy useita selkeitä mainintoja siitä, että tarjotaan ilmainen kokeilukerta tanssitunneille. esimerkiksi seuraavat lainaukset:\n\n- \"valitse suosikkisi ja kokeile kerran maksutta!\"\n- \"kokeile maksutta ja löydä suosikkituntisi ilmaisilla kokeilutunneilla!\"\n\nnämä maininnat täyttävät ehdottomasti vaatimuksen ilmaisen kokeilukerran tarjoamisesta sekä ilmaisuilla \"kokeile maksutta\" ja \"ilmaisilla kokeilutunneilla\". kyseessä on tanssiharrastus (tanssi), ja toiminta tapahtuu hyvinkäällä ja riihimäellä (ei helsingissä, mutta kuitenkin pääkaupunkiseudun lähistöllä, mutta **ei suoraan helsingissä**).\n\n**yhteenveto:**  \nkyllä – dance art tarjoaa ainakin hyvinkäällä ja riihimäellä ilmaisen kokeilukerran tanssiharrastukseen ja kutsuu kokeilemaan maksutta.  \nhuomio: sijainti ei ole helsingissä, vaan hyvinkäällä ja riihimäellä.",
+    "last_checked": "2025-11-19"
+  },
+  {
+    "name": "joogit.fi",
+    "website": "https://joogit.fi/osta/heimo-jasenyys-free/",
+    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+    "ai_comment": "kyllä – joogit.fi-sivulla (https://joogit.fi/osta/heimo-jasenyys-free/) tarjotaan 7 päivän ilmainen kokeilujakso (\"aloita 7 päivän ilmainen kokeilu\", \"ilmainen kokeilu!\"), jonka aikana voi osallistua joogaan ja treenata vapaasti palvelun kaikilla verkkotunneilla. kokeilujakso on nimenomaan ilmainen, eikä se sido mihinkään eikä käyttäjää veloiteta sen jälkeen. sivulla on useita mainintoja ilmaisesta kokeilusta sekä ilmaisuja kuten \"kokeile ilmaiseksi\". tämä täyttää hakukriteerit harrastukseen/joogaan liittyvästä ilmaisesta kokeilusta, vaikkakin kyse on online-palvelusta, ei fyysisestä studiosta helsingin kaupungissa.\n\n**selitys:**  \nsivusto tarjoaa 7 päivän ilmaisen kokeilun (free trial), jolla voi osallistua joogaan ja treeneihin verkkopalvelussa. palvelu liittyy harrastuskategoriaan (jooga, hyvinvointi, liikunta), mutta tapahtuu verkossa, ei suoraan fyysisenä tuntina helsingissä. jos \"ilmainen kokeilukerta\" hyväksytään myös etäpalveluihin, vastaus on selvästi kyllä. jos etsit vain fyysisiä studiokokeiluita helsingissä, tämä ei täytä täsmällisesti sitä vaatimusta – mutta kokeilu on ilmainen ja tarjoaa vastaavia palveluja harrastajalle.",
+    "last_checked": "2025-11-19"
   }
 ]

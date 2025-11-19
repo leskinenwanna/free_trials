@@ -19,10 +19,13 @@ SEARCH_QUERIES = [
     "ilmainen tanssitunti helsinki",
 ]
 
+# -----------------------------------------------------
+#  BRAVE SEARCH
+# -----------------------------------------------------
 def brave_search(query):
-    """Fetch URLs from Brave Search."""
     headers = {"X-Subscription-Token": BRAVE_KEY}
     params = {"q": query, "count": 20, "search_lang": "fi"}
+
     try:
         r = requests.get(
             "https://api.search.brave.com/res/v1/web/search",
@@ -35,56 +38,60 @@ def brave_search(query):
     except Exception:
         return []
 
+
+# -----------------------------------------------------
+#  PAGE TEXT SCRAPER
+# -----------------------------------------------------
 def fetch_page_text(url):
-    """Extract visible text from a webpage."""
     try:
         html = requests.get(url, timeout=25).text
         soup = BeautifulSoup(html, "html.parser")
 
         texts = soup.find_all(string=True)
-        visible_texts = []
+        visible = []
+
         for t in texts:
             if t.parent.name not in ["script", "style", "meta", "noscript"]:
                 stripped = t.strip()
                 if stripped:
-                    visible_texts.append(stripped)
+                    visible.append(stripped)
 
-        full_text = " ".join(visible_texts)
-        return full_text[:15000]
+        return " ".join(visible)[:15000]
+
     except Exception:
         return ""
 
+
+# -----------------------------------------------------
+#  AI CHECK FOR FREE TRIAL
+# -----------------------------------------------------
 def ai_judgement(text, url):
-    """
-    Improved AI prompt for detecting free trials.
-    More permissive and real-world friendly.
-    """
     prompt = f"""
-Analysoi tämä sivun teksti ja URL: {url}
+Analysoi sivu: {url}
 
-Tunnista, tarjoaako sivu ilmaisen kokeilukerran, ilmaisen treenin, free trialin
-tai maksuttoman tutustumiskerran harrastukseen, liikuntaan, tanssiin, joogaan,
-kuntosaliin tai muuhun harrastus aktiviteettiin Helsingissä.
+Tarkoitus: päätä tarjoaako sivu ilmaisen kokeilukerran, ilmaisen treenin,
+free trialin tai maksuttoman tutustumisen harrastukseen Helsingissä.
 
-HYVÄKSY SIVU, JOS:
-- otsikossa tai tekstissä lukee “ilmainen kokeilukerta”
-- sivulla lukee “kokeile ilmaiseksi”, “kokeile maksutta”, “tutustuminen ilmaiseksi”
-- ensimmäinen treeni on ilmainen uusille asiakkaille
+HYVÄKSY sivu, jos:
+- otsikossa lukee ilmainen kokeilukerta
+- tekstissä mainitaan ilmainen tutustuminen, free trial, kokeile maksutta
+- ensimmäinen treeni on ilmainen
 - rekisteröityminen johtaa ilmaiseen kokeiluun
-- teksti antaa edes osittain ymmärtää ilmaisen kokeilun mahdollisuutta
+- edes osa tekstistä viittaa ilmaiseen kokeiluun
 
-ÄLÄ HYLKÄÄ
-vain siksi että sivun teksti on lyhyt tai vajaa.
+ÄLÄ hylkää sivua vain, koska teksti on lyhyt.
 
-HYLKÄÄ SIVU
-vain jos missään kohdassa ei viitata ilmaiseen kokeiluun tai kyseessä oleva kokeilu esim. tarjoaa laihdutus- tai kauneuspalveluita.
+HYLKÄÄ vain, jos:
+- missään kohdassa ei mainita ilmaista kokeilua
+- kyse on kauneus/hoito/laihdutuspalvelusta
+- kyse on kaupungin virallisesta harrastus- tai infopalvelusta
 
-Vastaa muodossa:
+Vastaa:
 KYLLÄ – selitys
 TAI
 EI – selitys
 
-Sivun teksti:
+Teksti:
 {text}
 """
 
@@ -92,24 +99,58 @@ Sivun teksti:
         model="gpt-4.1",
         input=prompt
     )
+
     return resp.output_text.strip().lower()
 
+
+# -----------------------------------------------------
+#  AI CATEGORY CLASSIFIER
+# -----------------------------------------------------
+def ai_category(text, url):
+    prompt = f"""
+Määrittele harrastuksen kategoria sivun {url} perusteella.
+
+Valitse yksi:
+- kuntosali
+- ryhmäliikunta
+- tanssi
+- kamppailulajit
+- palloilulaji
+- taiteet
+- muut
+
+Palauta vain kategorian nimi:
+
+Teksti:
+{text[:6000]}
+"""
+
+    resp = client.responses.create(
+        model="gpt-4.1",
+        input=prompt
+    )
+
+    return resp.output_text.strip().lower()
+
+
+# -----------------------------------------------------
+#  MAIN
+# -----------------------------------------------------
 def main():
     offers = []
     seen_urls = set()
-    domain_seen = set()  # for domain-level dedupe
+    domain_seen = set()
 
-    # Collect URLs from Brave
+    # Fetch URLs
     for q in SEARCH_QUERIES:
         for url in brave_search(q):
-            if url not in seen_urls:
-                seen_urls.add(url)
+            seen_urls.add(url)
 
     print(f"Löytyi yhteensä {len(seen_urls)} URLia Brave-haulla.")
 
     approved_count = 0
 
-    # Analyze first 100 URLs
+    # Analyze URLs
     for url in sorted(seen_urls)[:100]:
         text = fetch_page_text(url)
         if not text:
@@ -119,23 +160,27 @@ def main():
 
         print("----")
         print(f"URL: {url}")
-        print(f"AI vastaus: {answer[:500]}")
+        print(f"AI vastaus: {answer[:400]}")
 
+        # If accepted
         if answer.startswith("kyllä"):
-            parsed = urlparse(url)
-            domain = parsed.netloc.lower().replace("www.", "")
+            domain = urlparse(url).netloc.lower().replace("www.", "")
 
-            # skip duplicate domains
             if domain in domain_seen:
                 print(f"⏩ Ohitetaan duplikaatti domain: {domain}")
                 continue
 
             domain_seen.add(domain)
 
+            # detect category
+            category = ai_category(text, url)
+            print(f"Kategoria: {category}")
+
             offers.append({
-                "name": url,  # unique by URL
+                "name": url,
                 "website": url,
                 "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+                "category": category,
                 "ai_comment": answer,
                 "last_checked": str(date.today())
             })
@@ -148,6 +193,7 @@ def main():
         json.dump(offers, f, ensure_ascii=False, indent=2)
 
     print(f"Tallennettu {approved_count} ilmaista kokeilua offers.json -tiedostoon.")
+
 
 if __name__ == "__main__":
     main()

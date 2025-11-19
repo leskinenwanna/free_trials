@@ -1,107 +1,82 @@
 [
   {
-    "name": "https://comets.fi/juniorit/",
-    "website": "https://comets.fi/juniorit/",
-    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys:  \nsivulla sanotaan suoraan: \"lasten tanssikursseilla on käytössä yksi ilmainen kokeilukerta. kurssipaikan voi perua sähköpostitse ennen toista kurssikertaa.\" tämä tarkoittaa, että uusi harrastaja voi kokeilla tanssituntia ilmaiseksi ennen sitoutumista kurssille ja maksua. teksti täyttää kaikki ilmaiselle kokeilukerralle asetetut kriteerit.  \npaikka: helsinki (pasilassa ja lähialueilla).",
-    "last_checked": "2025-11-19"
-  },
-  {
     "name": "https://heatgym.fi/ilmainen-kokeilukerta/",
     "website": "https://heatgym.fi/ilmainen-kokeilukerta/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys: sivun otsikkona ja tekstissä esiintyy selkeästi ilmaus \"ilmainen kokeilukerta\". sivun url sisältää myös /ilmainen-kokeilukerta/, mikä entisestään vahvistaa, että kyseessä on kuntosali (heat gym) ja että tarjolla on ilmainen kokeilukerta. sivulla ei mainita maksullisia kokeiluita tai muita rajoituksia, eikä kyseessä ole laihdutus- tai kauneuspalvelu. tämä täyttää kaikki hyväksymiskriteerit.",
+    "category": "kuntosali",
+    "ai_comment": "kyllä – selitys:  \nsivun otsikossa ja toistuvasti tekstissä mainitaan \"ilmainen kokeilukerta\". näiden perusteella sivu tarjoaa ilmaisen kokeilukerran heat gymin palveluihin. sivua ei ole rajattu pois ehtojen mukaan (ei kaupungin virallinen, ei kauneus/hoito/laihdutuspalvelu). myös lyhyempi teksti riittäisi hyväksyntään, koska ilmainen kokeilu mainitaan selkeästi otsikossa ja sivun yhteydessä.",
     "last_checked": "2025-11-19"
   },
   {
     "name": "https://itahelsinki.fi/nama-harrastukset-ita-helsinki-tarjoaa-edullisesti-syksylla/",
     "website": "https://itahelsinki.fi/nama-harrastukset-ita-helsinki-tarjoaa-edullisesti-syksylla/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys: sivun tekstissä mainitaan useita liikuntaan, tanssiin, joogaan ja muihin harrastuksiin liittyviä mahdollisuuksia, jotka ovat kokonaan maksuttomia tai joissa voi osallistua maksutta. esimerkiksi mainitaan \"ympäri vuoden 24/7 maksutta auki olevat ulkokuntosalit\", \"lähiliikuntapaikoista löytyy ulkokuntoiluvälineiden lisäksi maksuttomia pelikenttiä\", \"stoa järjestää 5–10 opetuskerran maksuttomia sirkuskursseja kaiken ikäisille\", \"stoassa... järjestetään... maksuttomia taidetyöpajoja\" sekä erikseen että \"alueliikuntapassin maksutta kahdeksi viikoksi\", \"vimma-liikuntaa... maksutonta\" ja \"nyt liikunnan kausikortteja on myös lainattavissa maksutta kirjastosta\". erityisesti liikunnan osalta sivulla on useita kohtia, joissa treeniin tai kokeiluun pääsee maksutta tai edullisesti, sekä mainitaan selvästi maksuton osallistumismahdollisuus. sivulla siis viitataan ilmaisen kokeilun tai maksuttoman tutustumisen mahdollisuuksiin helsingissä.",
+    "category": "kuntosali",
+    "ai_comment": "kyllä – selitys:\n\nsivulla mainitaan useita harrastusmahdollisuuksia itä-helsingissä, joista osa on täysin maksuttomia. esimerkiksi ulkokuntosalit ja lähiliikuntapaikat ovat maksutta käytettävissä, ja stoassa järjestetään maksuttomia sirkuskursseja sekä avoimia taidetyöpajoja. lisäksi nuorille on tarjolla vimma-liikuntaa, jossa kurssit ovat maksuttomia (vaikka asiakaskortti maksaa 4 € kerran), ja nyt-liikuntaa, jonka kausikortteja voi lainata kirjastosta maksutta kahden viikon ajaksi, mikä rinnastuu free trial -tyyppiseen mahdollisuuteen.\n\nnäiden lisäksi mainitaan keskeisesti \"edullisia tai täysin maksuttomia harrastusmahdollisuuksia\", ja useammassa kohdassa viitataan siihen, että harrastuksen voi aloittaa maksutta tai kokeilla maksutta ainakin tietyn ajan (esim. lainaamalla harrastepassin).\n\ntästä syystä sivu hyväksytään: se mainitsee ilmaiset kokeilumahdollisuudet ja maksuttoman kokeilun.",
     "last_checked": "2025-11-19"
   },
   {
-    "name": "https://joogit.fi/osta/heimo-jasenyys-free/",
-    "website": "https://joogit.fi/osta/heimo-jasenyys-free/",
+    "name": "https://keskustelu.suomi24.fi/t/17643969/edullinen-parturi-helsinki",
+    "website": "https://keskustelu.suomi24.fi/t/17643969/edullinen-parturi-helsinki",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys\n\nsivulla https://joogit.fi/osta/heimo-jasenyys-free/ tarjotaan selvästi 7 päivän ilmaista kokeilujaksoa joogit.fi:n onlinejoogaan ja treenipalveluun. tekstissä sanotaan useaan otteeseen esimerkiksi \"aloita 7 päivän ilmainen kokeilu\", \"ilmainen kokeilu! välisumma € 0,00\", \"kokeilujakso ei sido mihinkään, eikä sinua veloiteta sen jälkeen\" sekä \"kokeile ilmaiseksi\". uudet asiakkaat voivat rekisteröityä ja kokeilla palvelun yli 500 harjoituksen videokirjastoa ja 20 verkkokurssia ilman sitoumuksia. \n\nkyseessä on siis selkeä ilmainen liikunta- ja joogakokeilu (free trial), eikä mitään piilokuluja mainita. palvelu on suunnattu kaiken tasoisille ja se on kotimainen. kaikki hyväksymiskriteerit täyttyvät.",
+    "category": "muut",
+    "ai_comment": "kyllä – selitys:\n\nkeskustelussa mainitaan useaan kertaan, että annetaan koodi, jolla uusi asiakas saa ensimmäisen hiustenleikkauksen cuttersilla ilmaiseksi. tekstissä sanotaan selkeästi mm. \"alla nopeimmalle ilmainen kokeilukerta\", \"tällä koodilla saat ensimmäisen hiustenleikkauksen cuttersilla ilmaiseksi\", \"pari koodia nopeimmille ilmaiseen leikkuuseen\" sekä toistuvasti korostetaan, että uusi asiakas voi käyttää koodia ilmaiseen kokeilukertaan hiustenleikkaukseen helsingissä.\n\nkyseessä ei ole kaupungin virallinen harrastus- tai infopalvelu, vaan yksityinen tarjous parturipalvelusta keskustelufoorumilla. kauneuspalveluissakin voidaan hyväksyä, mutta tässä annetaan todella ilmainen tutustumiskerta (koodi).\n\nvastaus:  \n**kyllä – sivulla tarjotaan ilmainen kokeilukerta (hiustenleikkaus) helsingissä koodilla uuden asiakkaan cutters-salongissa.**",
     "last_checked": "2025-11-19"
   },
   {
     "name": "https://kimmoluukkonen.com/tunnit-ja-kurssit/",
     "website": "https://kimmoluukkonen.com/tunnit-ja-kurssit/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys: sivulla https://kimmoluukkonen.com/tunnit-ja-kurssit/ sanotaan selkeästi sekä otsikkotasolla että tekstissä: \"ensimmäinen tuntisi meillä on aina ilmainen kokeilukerta – päätät vasta sitten, haluatko maksaa kurssin.\" ja \"tanssikurssin ensimmäinen opetuskerta on meillä aina maksuton!\" tämä täyttää hyväksymiskriteerit (ilmainen kokeilukerta tai mahdollisuus kokeilla ilmaiseksi tanssiharrastusta helsingissä).",
+    "category": "tanssi",
+    "ai_comment": "kyllä – selitys\n\nsivulla mainitaan selkeästi ja useaan otteeseen, että \"ensimmäinen tuntisi meillä on aina ilmainen kokeilukerta – päätät vasta sitten, haluatko maksaa kurssin.\" lisäksi todetaan: \"tanssikurssin ensimmäinen opetuskerta on meillä aina maksuton! kurssimaksu tulee olla maksettuna vasta ennen toista opetuskertaa, eli voit käydä ensin kokeilemassa ja päättää sitten, haluatko jatkaa kurssilla.\" tämä täyttää hyväksymiskriteerit (ilmainen kokeilukerta, maksuton tutustuminen harrastukseen helsingissä).",
     "last_checked": "2025-11-19"
   },
   {
     "name": "https://kodarit.com/fi/ilmainen-kokeilu/",
     "website": "https://kodarit.com/fi/ilmainen-kokeilu/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys\n\nsivu https://kodarit.com/fi/ilmainen-kokeilu/ tarjoaa selvästi ilmaisen kokeilukerran koodauksen harrastukseen. otsikossa ja tekstissä mainitaan useasti \"ilmainen kokeilukerta\", \"ilmaiselle kokeilutunnille\", \"kokeilemaan millaista koodauksen harrastaminen on\", ja sivulla on ilmoittautumislomake ilmaiselle kokeilutunnille. kokeilukerrat ovat tarjolla muun muassa helsingissä (pikku-huopalahti, kalasatama). kyseessä on harrastustoiminta (koodaus), ei laihdutus-/kauneuspalvelu. kaikki vaaditut ehdot täyttyvät.",
-    "last_checked": "2025-11-19"
-  },
-  {
-    "name": "https://nuorten.hel.fi/tekemista-ja-paikkoja/harrastamisen-suomen-malli/",
-    "website": "https://nuorten.hel.fi/tekemista-ja-paikkoja/harrastamisen-suomen-malli/",
-    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys  \nsivu kertoo, että harrastamisen suomen malli tarjoaa maksuttomia (ilmaisia) harrastuksia 3.–9.-luokkalaisille helsingin kouluissa ja niiden lähiympäristössä. tekstissä lukee selkeästi: \"maksuttomia harrastuksia 3.–9.-luokkalaisille!\" ja \"tutustu maksuttomiin, koulupäivän jälkeisiin harrastuksiin...\" sekä \"olet myös tervetullut tutustumaan harrastukseen ilman ilmoittautumista, jos ryhmässä on tilaa.\" tämä viittaa siihen, että harrastuksia voi kokeilla maksutta ilman sitoutumista, joten kyseessä on ilmainen kokeilu/tutustumiskerta. harrastukset kattavat myös liikuntaa, tanssia ja kuntosalin.\n\nsivu täyttää hyväksymisvaatimukset: tarjolla on ilmainen kokeilu/tutustuminen harrastusaktiviteettiin helsingissä.",
-    "last_checked": "2025-11-19"
-  },
-  {
-    "name": "https://tfwstadi.com/",
-    "website": "https://tfwstadi.com/",
-    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys\n\nsivulla https://tfwstadi.com/ mainitaan useaan otteeseen selkeästi ilmaisen kokeilutunnin mahdollisuus:\n\n- \"varaa ilmainen kokeilutunti\"\n- \"jos kuitenkin haluat kokeilla ennen ostopäätöstä, niin varaa itsellesi ilmainen kokeilutunti!\"\n- useita nappeja ja call-to-actioneja, joissa viitataan kokeilutuntiin (\"varaa kokeilutunti\", \"kokeilutunti on helppo ja vaivaton tapa aloittaa uusi harrastus\")\n- teksti antaa selkeästi ymmärtää, että ensimmäinen tutustumiskerta tfw-treeneihin on ilmainen uusille asiakkaille\n\nkyseessä on liikuntaan ja toiminnalliseen harjoitteluun liittyvä palvelu helsingissä, eikä kyse ole kauneus- tai laihdutuspalvelusta. sivulla käytetään suoraan ilmaisuja \"ilmainen kokeilutunti\", joten se täyttää kaikki hyväksyntäkriteerit.",
+    "category": "muut",
+    "ai_comment": "kyllä – selitys:\n\nsivulla mainitaan otsikossa “ilmainen kokeilukerta” ja tekstissä kerrotaan, että voi tulla kokeilemaan koodauksen harrastamista ilmaiselle kokeilutunnille helsingissä (mm. paciuksenkaari 17 tai capellan puistotie 5). sivulta löytyy myös suora ilmoittautumismahdollisuus ilmaiselle kokeilutunnille. kaikki nämä täyttävät hyväksymiskriteerit.",
     "last_checked": "2025-11-19"
   },
   {
     "name": "https://trib3.fi/ensikertalaisille/",
     "website": "https://trib3.fi/ensikertalaisille/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys:\n\nsivun tekstissä sanotaan selkeästi useaan otteeseen, että ensimmäinen treeni on ilmainen uusille asiakkaille. esimerkkejä tekstistä:\n- \"kokeile nyt ilmaiseksi\"\n- \"rekisteröidy varataksesi paikan ensimmäiselle treenille. se on ilmaista!\"\n- \"varaa ensimmäinen tuntisi ilmaiseksi.\"\n\nnämä ilmaisut osoittavat selkeästi, että trib3 helsingissä tarjoaa ilmaiseksi ensimmäisen treenikerran uusille asiakkaille, eli kyse on maksuttomasta tutustumiskerrasta harrastukseen/ryhmäliikuntaan/kuntosalitoimintaan.\n\nsivu siis täyttää hyväksymiskriteerit.",
-    "last_checked": "2025-11-19"
-  },
-  {
-    "name": "https://www.hel.fi/fi/uutiset/kaikissa-helsingin-peruskouluissa-harrastetaan-iltapaivisin-tytoille-omia-ryhmia",
-    "website": "https://www.hel.fi/fi/uutiset/kaikissa-helsingin-peruskouluissa-harrastetaan-iltapaivisin-tytoille-omia-ryhmia",
-    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys:\n\nsivun tekstissä kerrotaan, että harrastamisen suomen malli tarjoaa yli 13 000 maksutonta harrastuspaikkaa helsingin peruskoulujen 3.–9. luokkien oppilaille. tekstissä käytetään useasti termiä “maksuttomia iltapäiväharrastuksia”, ja todetaan selkeästi: \"helsinkiläislapset ja -nuoret pääsevät jälleen osallistumaan maksuttomiin iltapäiväharrastuksiin\" ja \"harrastamisen suomen malli tarjoaa yli 13 000 maksutonta harrastuspaikkaa helsingin peruskoulujen 3.–9. luokkien oppilaille tänä lukuvuonna.\"\n\nvaikka ei suoranaisesti mainita “ilmainen kokeilukerta”, “ensimmäinen treeni ilmainen” tai “kokeile ilmaiseksi”, niin koko harrastustoiminta on tarkoitettu maksuttomaksi osallistujille (lapset ja nuoret). näin se täyttää ehdon, että harrastus/toiminta on ilmainen ja siihen voi osallistua maksutta (myös kokeilemaan).\n\nsivu kertoo myös, että harrastuksen voi aloittaa kesken kauden, jos ryhmissä on tilaa, joten se antaa ymmärtää, että harrastusta voi kokeilla ilman maksua osana toimintaa.\n\nsiksi:\n\nkyllä – sivu tarjoaa maksuttoman harrastusmahdollisuuden iltapäivisin peruskoulujen 3.-9. luokkien oppilaille helsingissä. harrastus on ilmainen, ja osallistuminen on maksutonta, mikä käytännössä tarkoittaa ilmaista kokeilukertaa/treeniä.",
+    "category": "ryhmäliikunta",
+    "ai_comment": "kyllä – selitys:\n\nsivulla mainitaan useaan otteeseen mahdollisuus ilmaiseen kokeiluun. esimerkiksi:\n- \"kokeile nyt ilmaiseksi\"\n- \"rekisteröidy varataksesi paikan ensimmäiselle treenille. se on ilmaista!\"\n- \"varaa ensimmäinen tuntisi ilmaiseksi.\"\n\nnämä kohdat täyttävät ehdottomasti kaikki hyväksymisen kriteerit: sivu tarjoaa ilmaisen kokeilukerran/treenin helsingissä ensikertalaisille. sivu ei liity kauneuspalveluihin, kaupungin viralliseen palveluun eikä ole muuten rajattu pois.\n\nvastaus:  \n**kyllä – sivu tarjoaa ilmaisen kokeilukerran/treenin helsingissä ensikertalaisille.**",
     "last_checked": "2025-11-19"
   },
   {
     "name": "https://www.hipko.fi/ilmoittaudu-ilmaiselle-tutustumistunnille/",
     "website": "https://www.hipko.fi/ilmoittaudu-ilmaiselle-tutustumistunnille/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys\n\nsivu tarjoaa selkeästi ilmaisen tutustumistunnin, kuten otsikossa ja tekstissä toistuvasti mainitaan:  \n- \"ilmainen tutustumistunti – kokeile ennen kuin aloitat!\"\n- \"varaa ilmainen tutustumistunti ja tule kokeilemaan!\"\n- \"tutustumistunteja järjestetään kaikissa lajeissa ja kaikilla hipkon saleilla.\"\n- \"varaa itsellesi ilmainen tutustumistunti. tehtyäsi varauksen saat sähköpostiisi varausvahvistuksen, jossa on ohjeet, varattu ajankohta ja kaikki muu oleellinen tieto.\"\n\nkyseessä on harrastus-/liikunta-aktiviteetti (kamppailu- ja kuntoilulajit) helsingin ja espoon alueella toimivassa keskuksessa, ja rekisteröityminen johtaa ilmaiseen kokeiluun. sivu täyttää kaikki hyväksymisen kriteerit.",
+    "category": "kamppailulajit",
+    "ai_comment": "kyllä – selitys:\n\nsivulla otsikossa ja sisällössä mainitaan useaan otteeseen \"ilmainen tutustumistunti\" sekä ilmaus \"kokeile ennen kuin aloitat\". tekstissä kehotetaan varaamaan **ilmainen tutustumistunti** haluamallesi salille, ja korostetaan selkeästi maksuttomuus (\"varaa ilmainen tutustumistunti ja tule kokeilemaan!\"). ohjeissa neuvotaan rekisteröitymään ja osallistumaan ensimmäiseen treeniin ilmaiseksi. sivulla tuodaan esille, että tutustumistunteja järjestetään kaikissa lajeissa ja saleilla helsingissä ja espoossa.\n\nsivun perusteella kyseessä on kamppailu- ja kuntoiluharrastus, ei kauneus/hoito/laihdutuspalvelu eikä kaupungin virallinen palvelu.\n\nnäin ollen ehdot täyttyvät: kyseessä on **ilmainen kokeilu tai tutustuminen harrastukseen helsingissä**.\n\n**vastaus:**  \nkyllä – sivulla tarjotaan selkeästi ilmainen tutustumistunti harrastukseen helsingin hipkossa.",
     "last_checked": "2025-11-19"
   },
   {
-    "name": "https://www.sttinfo.fi/tiedote/70446448/maksuton-harrastus-13-000-helsinkilaiselle-lapselle-ja-nuorelle?publisherId=60579873&lang=fi",
-    "website": "https://www.sttinfo.fi/tiedote/70446448/maksuton-harrastus-13-000-helsinkilaiselle-lapselle-ja-nuorelle?publisherId=60579873&lang=fi",
+    "name": "https://www.hypoxi.fi/varaa-maksuton-kokeilukerta/",
+    "website": "https://www.hypoxi.fi/varaa-maksuton-kokeilukerta/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys\n\nsivun tiedotteessa todetaan selvästi, että harrastamisen suomen malli tarjoaa yli 13 000 maksutonta harrastuspaikkaa helsingin peruskoulujen 3.–9. luokkien oppilaille, ja ilmoittautuminen harrastuksiin on käynnissä tälle lukuvuodelle. toiminta on maksutonta ja sisältää monipuolisesti muun muassa liikuntaa ja tanssia, ja harrastusryhmät kokoontuvat viikoittain. sivulta löytyy selkeä osoitus siitä, että uudet osallistujat voivat ilmoittautua maksuttomaan harrastukseen ilman mainintaa maksuista, kokeilukerroista tai tutustumismaksuista. vaikka tarjontaa ei kuvata nimenomaisesti ilmaisen kokeilukerran muodossa, koko toiminta perustuu maksuttomuuteen ja avoimeen osallistumiseen.\n\nnäin ollen sivu täyttää vaatimuksen: osallistuminen, joka normaalisti olisi maksullinen harrastus (esim. liikunta, tanssi), on täysin maksutonta helsingissä tietyille kohderyhmille. tämä antaa vähintäänkin saman hyödyn kuin ilmainen kokeilukerta tai tutustuminen.",
+    "category": "kuntosali",
+    "ai_comment": "kyllä – selitys:\n\nsivulla sekä otsikossa että tekstissä esiintyy selkeästi ilmaus \"varaa maksuton kokeilukerta\", ja siinä todetaan myös tekstissä: \"varaa aikasi maksuttomaan kokeilukertaan, joka sisältää laitekokeilun.\" lisäksi sivulla mainitaan useaan otteeseen \"maksuton kokeilukerta\". näiden perusteella sivu tarjoaa maksuttoman kokeilukerran hypoxi-studiossa helsingissä. \n\nsivulla ei myöskään ole kyse kaupungin virallisesta harrastuspalvelusta, ja vaikka hypoxi liittyy kehonhuoltoon/laihdutukseen, kyseessä on liikuntamuoto/harjoittelu ja varauksen kautta on mahdollista kokeilla palvelua maksutta.  \n\nsiksi:  \n**kyllä – sivu selkeästi tarjoaa maksuttoman kokeilukerran helsingissä.**",
     "last_checked": "2025-11-19"
   },
   {
-    "name": "https://www.suomi.fi/palvelut/verkkoasiointi/harrastukset-tutustu-helsingin-harrastusmahdollisuuksiin-helsingin-kaupunki-kulttuurin-ja-vapaa-ajan-toimiala/c08a8141-7586-4c4d-a307-b3c3174abf3f",
-    "website": "https://www.suomi.fi/palvelut/verkkoasiointi/harrastukset-tutustu-helsingin-harrastusmahdollisuuksiin-helsingin-kaupunki-kulttuurin-ja-vapaa-ajan-toimiala/c08a8141-7586-4c4d-a307-b3c3174abf3f",
+    "name": "https://www.liikku.fi/tutustu-liikkuun-ilmaiseksi/",
+    "website": "https://www.liikku.fi/tutustu-liikkuun-ilmaiseksi/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys:\n\nsivun tekstissä mainitaan useaan otteeseen, että helsingin kaupungin toimialan järjestämissä harrastuksissa ja aktiviteeteissa on tarjolla maksuttomia vaihtoehtoja. esimerkiksi seuraavat kohdat täyttävät hyväksymiskriteerit:\n\n- “harrastamisen suomen malli tarjoaa 3.-9. -luokkalaisille erilaisia maksuttomia harrastuksia helsingin kouluissa ja niiden lähiympäristössä.”\n- “kulttuurikeskukset järjestävät maksuttomia ja maksullisia vapaa-ajan taidekursseja ja -leirejä lapsille ja nuorille.”\n- “tanssitoimintaa nuorille. maksuttomia tanssitunteja ympäri helsinkiä.”\n- “kulttuurikeskukset järjestävät maksuttomia ja maksullisia vapaa-ajan taidekursseja ja -leirejä aikuisille.”\n\nvaikka sivulla ei suoraan sanota “ilmainen kokeilukerta”, useissa kohdissa viitataan “maksuttomiin harrastuksiin”, “maksuttomiin tanssitunteihin” jne., mikä täyttää vaatimuksen ilmaisen kokeilu- tai tutustumismahdollisuuden tarjoamisesta. sivulla myös kehotetaan tutustumaan harrastusmahdollisuuksiin, mikä kontekstissaan viittaa siihen, että kävijälle on tarjolla ilmaisia mahdollisuuksia kokeilla eri aktiviteetteja helsingissä.\n\nsivu siis hyväksytään, koska maksuttoman kokeilun mahdollisuus mainitaan useissa harrastusmuodoissa.",
+    "category": "kuntosali",
+    "ai_comment": "kyllä – selitys\n\nsivulla \"https://www.liikku.fi/tutustu-liikkuun-ilmaiseksi/\" kerrotaan selkeästi, että liikku-kuntosaliin voi tutustua ilmaiseksi: \n\n- otsikossa lukee \"tutustu liikkuun ilmaiseksi\".\n- tekstissä mainitaan: \"tutustuminen on ilmaista, eikä vaadi ennakkoilmoittautumista. ilmaisella testitreenillä voi käydä kerran.\"\n- myös englanniksi sanotaan: \"try us out for free\".\n- treeni on mainittu maksuttomaksi ja kertaluontoiseksi mahdollisuudeksi tutustua toimintaan.\n- sivulla mainitaan helsingin toimipiste osana saliketjun sijainteja.\n\nkaikki annetut kriteerit ilmaisen treenin / kokeilun hyväksymiselle täyttyvät. sivu tarjoaa ilmaisen tutustumiskerran helsingissä.",
     "last_checked": "2025-11-19"
   },
   {
     "name": "https://www.unisport.fi/fi/ilmainen-tutustumiskaynti",
     "website": "https://www.unisport.fi/fi/ilmainen-tutustumiskaynti",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys:  \nsivulla mainitaan selvästi: \"ensimmäinen treeni uusille asiakkaille on ilmainen. kampanjakoodilla 'freevisit' voit lunastaa ensimmäisen ilmaisen kertakäynnin, jolla pääset tutustumaan unisportin liikuntakeskuksiin.\"  \ntämä täyttää kaikki antamasi hyväksymiskriteerit:  \n- ensimmäinen treeni on ilmainen uusille asiakkaille.  \n- sivulla käytetään ilmaisua ”ilmainen tutustumiskäynti”.  \n- kokeilukerta on nimenomaan liikuntakeskuspalveluihin helsingissä.  \n\nsivu siis tarjoaa ilmaisen kokeilukerran treeniin liikuntakeskuksessa helsingissä.",
-    "last_checked": "2025-11-19"
-  },
-  {
-    "name": "https://www.valimogym.fi/kokeilu",
-    "website": "https://www.valimogym.fi/kokeilu",
-    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "ai_comment": "kyllä – selitys:  \nsivulla lukee selkeästi \"uudet asiakkaat ovat tervetulleita tutustumaan kerran valimo gymin kuntosalille ilmaiseksi!\" sekä ohjeet, kuinka tilaus tehdään verkkokaupasta syöttämällä alekoodi tutustu, jolla saa kerran veloituksetta. lisäksi puhutaan \"ilmainen tutustuminen\" ja \"kokeilukerta\". näin ollen sivu tarjoaa ilmaisen kokeilukerran kuntosalille helsingissä ja täyttää kaikki hyväksymiskriteerit.",
+    "category": "kuntosali",
+    "ai_comment": "kyllä – sivulla sanotaan selkeästi: \n\n- otsikossa: \"ilmainen tutustumiskäynti\"\n- tekstissä: \"ensimmäinen treeni uusille asiakkaille on ilmainen.\"  \n- tekstissä mainitaan myös kampanjakoodi, jolla saat ensimmäisen ilmaisen kertakäynnin.\n\nsivu tarjoaa siis maksuttoman, ilmaisen kokeilukerran unisportin liikuntakeskuksissa helsingissä.",
     "last_checked": "2025-11-19"
   }
 ]

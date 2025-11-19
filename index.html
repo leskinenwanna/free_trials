@@ -1,28 +1,118 @@
 <html>
   <head>
+    <meta charset="UTF-8" />
     <title>Ilmaiset kokeilut Helsingissä</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f7;
+        padding: 40px;
+        margin: 0;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 10px;
+        color: #111;
+      }
+
+      p.description {
+        text-align: center;
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 40px;
+      }
+
+      .offer-container {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .offer-card {
+        background: white;
+        padding: 18px 22px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        transition: all 0.2s ease;
+      }
+
+      .offer-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 14px rgba(0,0,0,0.12);
+      }
+
+      .offer-card a {
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #0066cc;
+      }
+
+      .offer-card a:hover {
+        text-decoration: underline;
+      }
+
+      .tag {
+        display: inline-block;
+        background: #def1ff;
+        color: #005a99;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-top: 6px;
+      }
+
+      hr {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        border: none;
+        border-top: 1px solid #ddd;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 13px;
+        color: #777;
+      }
+    </style>
   </head>
+
   <body>
     <h1>Ilmaiset kokeilut Helsingissä</h1>
-    <p>Tämä lista päivittyy automaattisesti maanantaisin tekoälyn avulla.</p>
+    <p class="description">
+      Tämä lista päivittyy automaattisesti maanantaisin tekoälyn avulla.
+    </p>
+
+    <div class="offer-container" id="offers"></div>
 
     <script>
       fetch('/data/offers.json')
         .then(r => r.json())
         .then(data => {
-          const ul = document.createElement('ul');
+          const container = document.getElementById('offers');
+
           data.forEach(o => {
-            const li = document.createElement('li');
-            li.innerHTML = `<strong>${o.name}</strong> – ${o.offer_type} – <a href="${o.website}" target="_blank">${o.website}</a>`;
-            ul.appendChild(li);
+            const card = document.createElement('div');
+            card.className = 'offer-card';
+
+            card.innerHTML = `
+              <a href="${o.website}" target="_blank">${o.website}</a>
+              <div class="tag">${o.offer_type}</div>
+            `;
+
+            container.appendChild(card);
           });
-          document.body.appendChild(ul);
         });
     </script>
 
-    <hr>
-    <p style="font-size: 0.9em; color: gray;">
-      Tiedot on koottu julkisista lähteistä. Tarkista aina ajantasaiset ehdot palveluntarjoajan sivulta.
-    </p>
+    <hr />
+    <footer>
+      Tiedot on koottu julkisista lähteistä. Tarkista ajantasaiset ehdot palveluntarjoajan sivulta.
+    </footer>
   </body>
 </html>
+

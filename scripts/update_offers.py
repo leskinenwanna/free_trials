@@ -108,6 +108,10 @@ def main():
 
         answer = ai_judgement(text, url)
 
+        print("----")
+        print(f"URL: {url}")
+        print(f"AI vastaus: {answer[:300]}")
+
         if answer.startswith("kyllä"):
             offers.append({
                 "name": url.split("//")[1].split("/")[0],

@@ -16,7 +16,7 @@ SEARCH_QUERIES = [
     "helsinki ilmainen harrastus kokeilu",
     "free trial gym helsinki",
     "kokeile maksutta helsinki",
-    "ilmainen tanssitunti helsinki",
+    "peruskurssi ilmaiseksi helsinki",
 ]
 
 # -----------------------------------------------------
@@ -75,7 +75,7 @@ free trialin tai maksuttoman tutustumisen harrastukseen Helsingissä.
 HYVÄKSY sivu, jos:
 - otsikossa lukee ilmainen kokeilukerta
 - tekstissä mainitaan ilmainen tutustuminen, free trial, kokeile maksutta
-- ensimmäinen treeni on ilmainen
+- ensimmäinen treeni, viikko tai peruskurssi on ilmainen
 - rekisteröityminen johtaa ilmaiseen kokeiluun
 - edes osa tekstistä viittaa ilmaiseen kokeiluun
 
@@ -83,8 +83,8 @@ HYVÄKSY sivu, jos:
 
 HYLKÄÄ vain, jos:
 - missään kohdassa ei mainita ilmaista kokeilua
-- kyse on kauneus/hoito/laihdutuspalvelusta
-- kyse on kaupungin virallisesta harrastus- tai infopalvelusta
+- kyse on kauneus/hoito/laihdutuspalvelusta tai keskustelupalstasta
+- kyse on kaupungin harrastus- tai infopalvelusta
 
 Vastaa:
 KYLLÄ – selitys

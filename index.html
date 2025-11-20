@@ -79,4 +79,97 @@
       }
 
       .tag {
+        display: inline-block;
+        background: #def1ff;
+        color: #005a99;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-top: 6px;
+      }
 
+      hr {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        border: none;
+        border-top: 1px solid #ddd;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 13px;
+        color: #777;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Kokeile harrastuksia ilmaiseksi Helsingissä</h1>
+    <p class="description">
+      Tämä lista päivittyy automaattisesti maanantaisin tekoälyn avulla.
+    </p>
+
+    <!-- CATEGORY BUTTONS -->
+    <div class="category-buttons" id="categoryButtons"></div>
+
+    <!-- OFFERS LIST -->
+    <div class="offer-container" id="offers"></div>
+
+    <script>
+      let allOffers = [];
+
+      function renderCategories() {
+        const categories = [...new Set(allOffers.map(o => o.category))];
+        const container = document.getElementById("categoryButtons");
+
+        categories.forEach(cat => {
+          const btn = document.createElement("button");
+          btn.innerText = cat.charAt(0).toUpperCase() + cat.slice(1);
+          btn.onclick = () => renderOffers(cat);
+          container.appendChild(btn);
+        });
+
+        // Default: show all
+        const btn = document.createElement("button");
+        btn.innerText = "Kaikki harrastukset";
+        btn.onclick = () => renderOffers(null);
+        container.appendChild(btn);
+      }
+
+      function renderOffers(category) {
+        const container = document.getElementById("offers");
+        container.innerHTML = "";
+
+        const filtered = category
+          ? allOffers.filter(o => o.category === category)
+          : allOffers;
+
+        filtered.forEach(o => {
+          const card = document.createElement('div');
+          card.className = 'offer-card';
+
+          card.innerHTML = `
+            <a href="${o.website}" target="_blank">${o.website}</a>
+            <div class="tag">${o.category}</div>
+          `;
+
+          container.appendChild(card);
+        });
+      }
+
+      // Fetch data once at load
+      fetch('/data/offers.json')
+        .then(r => r.json())
+        .then(data => {
+          allOffers = data;
+          renderCategories();
+          renderOffers(null);
+        });
+    </script>
+
+    <hr />
+    <footer>
+      Tiedot on koottu julkisista lähteistä tekoälyä hyödyntäen. Tarkista ajantasaiset ehdot palveluntarjoajan sivulta.
+    </footer>
+  </body>
+</html>

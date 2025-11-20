@@ -108,43 +108,65 @@
       Tietokanta päivittyy automaattisesti maanantaisin tekoälyn avulla.
     </p>
 
-    <!-- CATEGORY BUTTONS -->
     <div class="category-buttons" id="categoryButtons"></div>
 
-    <!-- OFFERS LIST -->
     <div class="offer-container" id="offers"></div>
 
     <script>
       let allOffers = [];
 
-      function renderCategories() {
-        const categories = [...new Set(allOffers.map(o => o.category))];
-        const container = document.getElementById("categoryButtons");
+      // Uudet kategoriat
+      const CATEGORY_DEFS = [
+        {
+          key: ["kuntosali", "ryhmäliikunta"],  
+          label: "Kuntosali tai ryhmäliikunta"
+        },
+        { key: "tanssi", label: "Tanssi" },
+        { key: "kamppailulajit", label: "Kamppailulajit" },
+        { key: "palloilulaji", label: "Palloilulaji" },
+        { key: "taiteet", label: "Taiteet" },
+        { key: "muut", label: "Muut" }
+      ];
 
-        categories.forEach(cat => {
+      function renderCategories() {
+        const container = document.getElementById("categoryButtons");
+        container.innerHTML = "";
+
+        CATEGORY_DEFS.forEach(cat => {
+          let keys = Array.isArray(cat.key) ? cat.key : [cat.key];
+
+          // Tarkista sisältääkö offers.json vähintään yhden tästä kategoriasta
+          const hasOffers = allOffers.some(o => keys.includes(o.category));
+          if (!hasOffers) return;
+
           const btn = document.createElement("button");
-          btn.innerText = cat.charAt(0).toUpperCase() + cat.slice(1);
-          btn.onclick = () => renderOffers(cat);
+          btn.textContent = cat.label;
+          btn.onclick = () => renderOffers(keys);
           container.appendChild(btn);
         });
 
-        const allBtn = document.createElement("button");
-        allBtn.innerText = "Kaikki harrastukset";
-        allBtn.onclick = () => renderOffers(null);
-        container.appendChild(allBtn);
+        if (allOffers.length > 0) {
+          const allBtn = document.createElement("button");
+          allBtn.textContent = "Näytä kaikki";
+          allBtn.onclick = () => renderOffers(null);
+          container.appendChild(allBtn);
+        }
       }
 
-      function renderOffers(category) {
+      function renderOffers(categories) {
         const container = document.getElementById("offers");
         container.innerHTML = "";
 
-        const filtered = category
-          ? allOffers.filter(o => o.category === category)
-          : allOffers;
+        let filtered;
+        if (!categories) {
+          filtered = allOffers;
+        } else {
+          filtered = allOffers.filter(o => categories.includes(o.category));
+        }
 
         filtered.forEach(o => {
-          const card = document.createElement('div');
-          card.className = 'offer-card';
+          const card = document.createElement("div");
+          card.className = "offer-card";
 
           card.innerHTML = `
             <a href="${o.website}" target="_blank">${o.website}</a>
@@ -155,12 +177,11 @@
         });
       }
 
-      fetch('/data/offers.json')
+      fetch("/data/offers.json")
         .then(r => r.json())
         .then(data => {
           allOffers = data;
           renderCategories();
-          // removed renderOffers(null)
         });
     </script>
 

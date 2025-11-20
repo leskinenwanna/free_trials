@@ -83,7 +83,7 @@ HYVÄKSY sivu, jos:
 
 HYLKÄÄ vain, jos:
 - missään kohdassa ei mainita ilmaista kokeilua
-- kyse on kauneus/hoito/laihdutuspalvelusta tai keskustelupalstasta
+- kyse on kauneushoito/parturi/kampaamo/laihdutuspalvelusta tai keskustelupalstasta
 - kyse on kaupungin harrastus- tai infopalvelusta
 
 Vastaa:

@@ -1,173 +1,200 @@
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Kokeile harrastuksia ilmaiseksi Helsingissä</title>
+import os
+import json
+import requests
+from bs4 import BeautifulSoup
+from datetime import date
+from urllib.parse import urlparse
+from openai import OpenAI
 
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f7;
-        padding: 40px;
-        margin: 0;
-        color: #333;
-      }
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+BRAVE_KEY = os.getenv("BRAVE_API_KEY")
 
-      h1 {
-        text-align: center;
-        font-size: 32px;
-        margin-bottom: 10px;
-        color: #111;
-      }
+SEARCH_QUERIES = [
+    "ilmainen kokeilukerta helsinki",
+    "ilmainen treeni helsinki",
+    "tutustumiskerta ilmaiseksi helsinki",
+    "helsinki ilmainen harrastus kokeilu",
+    "free trial gym helsinki",
+    "kokeile maksutta helsinki",
+    "peruskurssi ilmaiseksi helsinki",
+]
 
-      p.description {
-        text-align: center;
-        font-size: 16px;
-        color: #555;
-        margin-bottom: 30px;
-      }
+# -----------------------------------------------------
+#  BRAVE SEARCH
+# -----------------------------------------------------
+def brave_search(query):
+    headers = {"X-Subscription-Token": BRAVE_KEY}
+    params = {"q": query, "count": 20, "search_lang": "fi"}
 
-      .category-buttons {
-        text-align: center;
-        margin-bottom: 40px;
-      }
+    try:
+        r = requests.get(
+            "https://api.search.brave.com/res/v1/web/search",
+            headers=headers,
+            params=params,
+            timeout=20
+        )
+        results = r.json().get("web", {}).get("results", [])
+        return [item["url"] for item in results]
+    except Exception:
+        return []
 
-      .category-buttons button {
-        background: white;
-        border: 1px solid #bbb;
-        padding: 10px 20px;
-        margin: 6px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 15px;
-        transition: 0.2s;
-      }
 
-      .category-buttons button:hover {
-        background: #e8f3ff;
-        border-color: #0077dd;
-      }
+# -----------------------------------------------------
+#  PAGE TEXT SCRAPER
+# -----------------------------------------------------
+def fetch_page_text(url):
+    try:
+        html = requests.get(url, timeout=25).text
+        soup = BeautifulSoup(html, "html.parser")
 
-      .offer-container {
-        max-width: 800px;
-        margin: auto;
-      }
+        texts = soup.find_all(string=True)
+        visible = []
 
-      .offer-card {
-        background: white;
-        padding: 18px 22px;
-        margin-bottom: 18px;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-        transition: all 0.2s ease;
-      }
+        for t in texts:
+            if t.parent.name not in ["script", "style", "meta", "noscript"]:
+                stripped = t.strip()
+                if stripped:
+                    visible.append(stripped)
 
-      .offer-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 14px rgba(0,0,0,0.12);
-      }
+        return " ".join(visible)[:15000]
 
-      .offer-card a {
-        font-size: 18px;
-        font-weight: bold;
-        text-decoration: none;
-        color: #0066cc;
-      }
+    except Exception:
+        return ""
 
-      .offer-card a:hover {
-        text-decoration: underline;
-      }
 
-      .tag {
-        display: inline-block;
-        background: #def1ff;
-        color: #005a99;
-        padding: 3px 8px;
-        border-radius: 6px;
-        font-size: 12px;
-        margin-top: 6px;
-      }
+# -----------------------------------------------------
+#  AI CHECK FOR FREE TRIAL
+# -----------------------------------------------------
+def ai_judgement(text, url):
+    prompt = f"""
+Analysoi sivu: {url}
 
-      hr {
-        margin-top: 50px;
-        margin-bottom: 20px;
-        border: none;
-        border-top: 1px solid #ddd;
-      }
+Tarkoitus: päätä tarjoaako sivu ilmaisen kokeilukerran, ilmaisen treenin,
+free trialin tai maksuttoman tutustumisen harrastukseen Helsingissä.
 
-      footer {
-        text-align: center;
-        font-size: 13px;
-        color: #777;
-      }
-    </style>
-  </head>
+HYVÄKSY sivu, jos:
+- otsikossa lukee ilmainen kokeilukerta
+- tekstissä mainitaan ilmainen tutustuminen, free trial, kokeile maksutta
+- ensimmäinen treeni, viikko tai peruskurssi on ilmainen
+- rekisteröityminen johtaa ilmaiseen kokeiluun
+- edes osa tekstistä viittaa ilmaiseen kokeiluun
 
-  <body>
-    <h1>Kokeile harrastuksia ilmaiseksi Helsingissä</h1>
-    <p class="description">
-      Tietokanta päivittyy automaattisesti maanantaisin tekoälyn avulla.
-    </p>
+ÄLÄ hylkää sivua vain, koska teksti on lyhyt.
 
-    <!-- CATEGORY BUTTONS -->
-    <div class="category-buttons" id="categoryButtons"></div>
+HYLKÄÄ vain, jos:
+- missään kohdassa ei mainita ilmaista kokeilua
+- kyse on kauneus/parturi/kampaamo/laihdutuspalvelusta tai keskustelupalstasta
+- kyse on kaupungin harrastus tai infopalvelusta
 
-    <!-- OFFERS LIST -->
-    <div class="offer-container" id="offers"></div>
+Vastaa:
+KYLLÄ - selitys
+TAI
+EI - selitys
 
-    <script>
-      let allOffers = [];
+Teksti:
+{text}
+"""
 
-      function renderCategories() {
-        const categories = [...new Set(allOffers.map(o => o.category))];
-        const container = document.getElementById("categoryButtons");
+    resp = client.responses.create(
+        model="gpt-4.1",
+        input=prompt
+    )
 
-        categories.forEach(cat => {
-          const btn = document.createElement("button");
-          btn.innerText = cat.charAt(0).toUpperCase() + cat.slice(1);
-          btn.onclick = () => renderOffers(cat);
-          container.appendChild(btn);
-        });
+    return resp.output_text.strip().lower()
 
-        const allBtn = document.createElement("button");
-        allBtn.innerText = "Kaikki harrastukset";
-        allBtn.onclick = () => renderOffers(null);
-        container.appendChild(allBtn);
-      }
 
-      function renderOffers(category) {
-        const container = document.getElementById("offers");
-        container.innerHTML = "";
+# -----------------------------------------------------
+#  AI CATEGORY CLASSIFIER
+# -----------------------------------------------------
+def ai_category(text, url):
+    prompt = f"""
+Määrittele harrastuksen kategoria sivun {url} perusteella.
 
-        const filtered = category
-          ? allOffers.filter(o => o.category === category)
-          : allOffers;
+Valitse yksi:
+- kuntosali
+- ryhmäliikunta
+- tanssi
+- kamppailulajit
+- palloilulaji
+- taiteet
+- muut
 
-        filtered.forEach(o => {
-          const card = document.createElement('div');
-          card.className = 'offer-card';
+Palauta vain kategorian nimi:
 
-          card.innerHTML = `
-            <a href="${o.website}" target="_blank">${o.website}</a>
-            <div class="tag">${o.category}</div>
-          `;
+Teksti:
+{text[:6000]}
+"""
 
-          container.appendChild(card);
-        });
-      }
+    resp = client.responses.create(
+        model="gpt-4.1",
+        input=prompt
+    )
 
-      fetch('/data/offers.json')
-        .then(r => r.json())
-        .then(data => {
-          allOffers = data;
-          renderCategories();
-          // removed renderOffers(null)
-        });
-    </script>
+    return resp.output_text.strip().lower()
 
-    <hr />
-    <footer>
-      Tiedot on koottu julkisista lähteistä tekoälyä hyödyntäen. Tarkista ajantasaiset ehdot palveluntarjoajan sivulta.
-    </footer>
-  </body>
-</html>
+
+# -----------------------------------------------------
+#  MAIN
+# -----------------------------------------------------
+def main():
+    offers = []
+    seen_urls = set()
+    domain_seen = set()
+
+    # Fetch URLs
+    for q in SEARCH_QUERIES:
+        for url in brave_search(q):
+            seen_urls.add(url)
+
+    print(f"Löytyi yhteensä {len(seen_urls)} URLia Brave-haulla.")
+
+    approved_count = 0
+
+    # Analyze URLs
+    for url in sorted(seen_urls)[:100]:
+        text = fetch_page_text(url)
+        if not text:
+            continue
+
+        answer = ai_judgement(text, url)
+
+        print("----")
+        print(f"URL: {url}")
+        print(f"AI vastaus: {answer[:400]}")
+
+        # If accepted
+        if answer.startswith("kyllä"):
+            domain = urlparse(url).netloc.lower().replace("www.", "")
+
+            if domain in domain_seen:
+                print(f"⏩ Ohitetaan duplikaatti domain: {domain}")
+                continue
+
+            domain_seen.add(domain)
+
+            # detect category
+            category = ai_category(text, url)
+            print(f"Kategoria: {category}")
+
+            offers.append({
+                "name": url,
+                "website": url,
+                "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+                "category": category,
+                "ai_comment": answer,
+                "last_checked": str(date.today())
+            })
+
+            approved_count += 1
+
+    # Save results
+    os.makedirs("data", exist_ok=True)
+    with open("data/offers.json", "w", encoding="utf-8") as f:
+        json.dump(offers, f, ensure_ascii=False, indent=2)
+
+    print(f"Tallennettu {approved_count} ilmaista kokeilua offers.json tiedostoon.")
+
+
+if __name__ == "__main__":
+    main()
 

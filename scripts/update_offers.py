@@ -111,8 +111,7 @@ def ai_category(text, url):
 Määrittele harrastuksen kategoria sivun {url} perusteella.
 
 Valitse yksi:
-- kuntosali
-- ryhmäliikunta
+- kuntosali tai ryhmäliikunta
 - tanssi
 - kamppailulajit
 - palloilulaji

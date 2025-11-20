@@ -18,7 +18,7 @@ SEARCH_QUERIES = [
     "kokeile maksutta helsinki",
     "peruskurssi ilmaiseksi helsinki",
     "kokeile ilmaiseksi helsinki",
-    "kokeile koripalloa ilmaiseksi helsinki"
+    "kokeile koripalloa ilmaiseksi helsinki",
     "kokeile jalkapalloa ilmaiseksi helsinki"
 ]
 

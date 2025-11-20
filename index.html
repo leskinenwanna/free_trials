@@ -23,7 +23,29 @@
         text-align: center;
         font-size: 16px;
         color: #555;
+        margin-bottom: 30px;
+      }
+
+      /* CATEGORY BUTTONS */
+      .category-buttons {
+        text-align: center;
         margin-bottom: 40px;
+     }
+
+      .category-buttons button {
+        background: white;
+        border: 1px solid #bbb;
+        padding: 10px 20px;
+        margin: 6px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.2s;
+      }
+
+      .category-buttons button:hover {
+        background: #e8f3ff;
+        border-color: #0077dd;
       }
 
       .offer-container {
@@ -57,62 +79,4 @@
       }
 
       .tag {
-        display: inline-block;
-        background: #def1ff;
-        color: #005a99;
-        padding: 3px 8px;
-        border-radius: 6px;
-        font-size: 12px;
-        margin-top: 6px;
-      }
-
-      hr {
-        margin-top: 50px;
-        margin-bottom: 20px;
-        border: none;
-        border-top: 1px solid #ddd;
-      }
-
-      footer {
-        text-align: center;
-        font-size: 13px;
-        color: #777;
-      }
-    </style>
-  </head>
-
-  <body>
-    <h1>Kokeile harrastuksia ilmaiseksi Helsingissä</h1>
-    <p class="description">
-      Tämä lista päivittyy automaattisesti maanantaisin tekoälyn avulla.
-    </p>
-
-    <div class="offer-container" id="offers"></div>
-
-    <script>
-      fetch('/data/offers.json')
-        .then(r => r.json())
-        .then(data => {
-          const container = document.getElementById('offers');
-
-          data.forEach(o => {
-            const card = document.createElement('div');
-            card.className = 'offer-card';
-
-            card.innerHTML = `
-              <a href="${o.website}" target="_blank">${o.website}</a>
-              <div class="tag">${o.offer_type}</div>
-            `;
-
-            container.appendChild(card);
-          });
-        });
-    </script>
-
-    <hr />
-    <footer>
-      Tiedot on koottu julkisista lähteistä tekoälyä hyödyntäen. Tarkista ajantasaiset ehdot palveluntarjoajan sivulta.
-    </footer>
-  </body>
-</html>
 

@@ -17,6 +17,9 @@ SEARCH_QUERIES = [
     "free trial gym helsinki",
     "kokeile maksutta helsinki",
     "peruskurssi ilmaiseksi helsinki",
+    "kokeile ilmaiseksi helsinki",
+    "kokeile koripalloa ilmaiseksi helsinki"
+    "kokeile jalkapalloa ilmaiseksi helsinki"
 ]
 
 # -----------------------------------------------------
@@ -24,7 +27,7 @@ SEARCH_QUERIES = [
 # -----------------------------------------------------
 def brave_search(query):
     headers = {"X-Subscription-Token": BRAVE_KEY}
-    params = {"q": query, "count": 20, "search_lang": "fi"}
+    params = {"q": query, "count": 50, "search_lang": "fi"}  # 20 → 50
 
     try:
         r = requests.get(
@@ -151,7 +154,7 @@ def main():
     approved_count = 0
 
     # Analyze URLs
-    for url in sorted(seen_urls)[:100]:
+    for url in sorted(seen_urls)[:170]:
         text = fetch_page_text(url)
         if not text:
             continue

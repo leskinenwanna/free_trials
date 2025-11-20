@@ -74,7 +74,7 @@ free trialin tai maksuttoman tutustumisen harrastukseen Helsingissä.
 
 HYVÄKSY sivu, jos:
 - otsikossa lukee ilmainen kokeilukerta
-- tekstissä mainitaan ilmainen tutustuminen, free trial, kokeile maksutta
+- tekstissä mainitaan esim. ilmainen tutustuminen, free trial, kokeile maksutta
 - ensimmäinen treeni, viikko tai peruskurssi on ilmainen
 - rekisteröityminen johtaa ilmaiseen kokeiluun
 - edes osa tekstistä viittaa ilmaiseen kokeiluun

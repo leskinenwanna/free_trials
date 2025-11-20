@@ -26,11 +26,10 @@
         margin-bottom: 30px;
       }
 
-      /* CATEGORY BUTTONS */
       .category-buttons {
         text-align: center;
         margin-bottom: 40px;
-     }
+      }
 
       .category-buttons button {
         background: white;
@@ -129,11 +128,10 @@
           container.appendChild(btn);
         });
 
-        // Default: show all
-        const btn = document.createElement("button");
-        btn.innerText = "Kaikki harrastukset";
-        btn.onclick = () => renderOffers(null);
-        container.appendChild(btn);
+        const allBtn = document.createElement("button");
+        allBtn.innerText = "Kaikki harrastukset";
+        allBtn.onclick = () => renderOffers(null);
+        container.appendChild(allBtn);
       }
 
       function renderOffers(category) {
@@ -157,13 +155,12 @@
         });
       }
 
-      // Fetch data once at load
       fetch('/data/offers.json')
         .then(r => r.json())
         .then(data => {
           allOffers = data;
           renderCategories();
-          renderOffers(null);
+          // removed renderOffers(null)
         });
     </script>
 
@@ -173,3 +170,4 @@
     </footer>
   </body>
 </html>
+

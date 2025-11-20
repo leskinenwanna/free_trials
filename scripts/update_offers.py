@@ -17,24 +17,22 @@ SEARCH_QUERIES = [
     "free trial gym helsinki",
     "kokeile maksutta helsinki",
     "peruskurssi ilmaiseksi helsinki",
-    "kokeile ilmaiseksi helsinki",
-    "kokeile koripalloa ilmaiseksi helsinki",
-    "kokeile jalkapalloa ilmaiseksi helsinki"
 ]
 
+
 # -----------------------------------------------------
-#  BRAVE SEARCH
+# BRAVE SEARCH
 # -----------------------------------------------------
 def brave_search(query):
     headers = {"X-Subscription-Token": BRAVE_KEY}
-    params = {"q": query, "count": 50, "search_lang": "fi"}  # 20 → 50
+    params = {"q": query, "count": 20, "search_lang": "fi"}
 
     try:
         r = requests.get(
             "https://api.search.brave.com/res/v1/web/search",
             headers=headers,
             params=params,
-            timeout=20
+            timeout=20,
         )
         results = r.json().get("web", {}).get("results", [])
         return [item["url"] for item in results]
@@ -43,7 +41,7 @@ def brave_search(query):
 
 
 # -----------------------------------------------------
-#  PAGE TEXT SCRAPER
+# PAGE TEXT SCRAPER
 # -----------------------------------------------------
 def fetch_page_text(url):
     try:
@@ -60,13 +58,12 @@ def fetch_page_text(url):
                     visible.append(stripped)
 
         return " ".join(visible)[:15000]
-
     except Exception:
         return ""
 
 
 # -----------------------------------------------------
-#  AI CHECK FOR FREE TRIAL
+# AI CHECK FOR FREE TRIAL
 # -----------------------------------------------------
 def ai_judgement(text, url):
     prompt = f"""
@@ -100,14 +97,13 @@ Teksti:
 
     resp = client.responses.create(
         model="gpt-4.1",
-        input=prompt
+        input=prompt,
     )
-
     return resp.output_text.strip().lower()
 
 
 # -----------------------------------------------------
-#  AI CATEGORY CLASSIFIER
+# AI CATEGORY CLASSIFIER
 # -----------------------------------------------------
 def ai_category(text, url):
     prompt = f"""
@@ -130,14 +126,13 @@ Teksti:
 
     resp = client.responses.create(
         model="gpt-4.1",
-        input=prompt
+        input=prompt,
     )
-
     return resp.output_text.strip().lower()
 
 
 # -----------------------------------------------------
-#  MAIN
+# MAIN
 # -----------------------------------------------------
 def main():
     offers = []
@@ -154,7 +149,7 @@ def main():
     approved_count = 0
 
     # Analyze URLs
-    for url in sorted(seen_urls)[:170]:
+    for url in sorted(seen_urls)[:100]:
         text = fetch_page_text(url)
         if not text:
             continue
@@ -179,14 +174,16 @@ def main():
             category = ai_category(text, url)
             print(f"Kategoria: {category}")
 
-            offers.append({
-                "name": url,
-                "website": url,
-                "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-                "category": category,
-                "ai_comment": answer,
-                "last_checked": str(date.today())
-            })
+            offers.append(
+                {
+                    "name": url,
+                    "website": url,
+                    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+                    "category": category,
+                    "ai_comment": answer,
+                    "last_checked": str(date.today()),
+                }
+            )
 
             approved_count += 1
 
@@ -195,9 +192,12 @@ def main():
     with open("data/offers.json", "w", encoding="utf-8") as f:
         json.dump(offers, f, ensure_ascii=False, indent=2)
 
-    print(f"Tallennettu {approved_count} ilmaista kokeilua offers.json tiedostoon.")
+    print(
+        f"Tallennettu {approved_count} ilmaista kokeilua offers.json tiedostoon."
+    )
 
 
 if __name__ == "__main__":
     main()
+
 

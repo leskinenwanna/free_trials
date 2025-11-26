@@ -78,5 +78,29 @@
     "category": "kuntosali",
     "ai_comment": "kyllä - selitys:  \nsivulla otsikossa ja tekstissä mainitaan selkeästi \"free first visit\" ja kerrotaan, että uusille asiakkaille ensimmäinen käynti unisport-keskuksessa on ilmainen. teksti ohjeistaa käyttämään promokoodia \"freevisit\" ilmaisen käynnin lunastamiseen. tämä täyttää hyväksymiskriteerit: ensimmäinen käynti (treeni) on ilmainen ja kyseessä on selvästi maksuton tutustuminen liikuntaharrastukseen helsingissä.",
     "last_checked": "2025-11-24"
+  },
+  {
+    "name": "https://myhub.fi",
+    "website": "https://myhub.fi",
+    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+    "category": "kuntosali",
+    "ai_comment": "kyllä - selitys:  \nsivulla otsikossa ja tekstissä mainitaan selkeästi \"free first visit\" ja kerrotaan, että uusille asiakkaille ensimmäinen käynti on ilmainen. ",
+    "last_checked": "2025-11-26"
+  },
+  {
+    "name": "https://meidokan.fi/judo/uutiset/meido-kan-kaynnistaa-maksuttoman-judon-peruskurssin-tule-mukaan-ja-tuo-ystavasikin/",
+    "website": "https://meidokan.fi/judo/uutiset/meido-kan-kaynnistaa-maksuttoman-judon-peruskurssin-tule-mukaan-ja-tuo-ystavasikin/",
+    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+    "category": "kamppailulaji",
+    "ai_comment": "kyllä - selitys:  \nsivulla otsikossa ja tekstissä mainitaan selkeästi \"free first visit\" ja kerrotaan, että uusille asiakkaille ensimmäinen käynti on ilmainen. ",
+    "last_checked": "2025-11-26"
+  },
+  {
+    "name": "https://www.finnaiki.fi/kokeile-ilmaiseksi-kaksi-kertaa",
+    "website": "https://www.finnaiki.fi/kokeile-ilmaiseksi-kaksi-kertaa",
+    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+    "category": "kamppailulaji",
+    "ai_comment": "kyllä - selitys:  \nsivulla otsikossa ja tekstissä mainitaan selkeästi \"free first visit\" ja kerrotaan, että uusille asiakkaille ensimmäinen käynti on ilmainen. ",
+    "last_checked": "2025-11-26"
   }
 ]

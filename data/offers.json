@@ -4,103 +4,87 @@
     "website": "https://comets.fi/juniorit/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
     "category": "tanssi",
-    "ai_comment": "kyllä – sivulla **mainitaan selvästi, että lasten tanssikursseilla on käytössä yksi ilmainen kokeilukerta**:  \n> \"lasten tanssikursseilla on käytössä yksi ilmainen kokeilukerta. kurssipaikan voi perua sähköpostitse ennen toista kurssikertaa. toisen kurssikerran jälkeen ilmoittautumiset ovat sitovia...\"\n\ntämä tarkoittaa, että lapsi voi osallistua ensimmäiselle tanssitunnille ilmaiseksi helsingissä ja päättää sen jälkeen jatkaako kurssilla. tämä täyttää kaikki hyväksynnän kriteerit; ilmaista kokeilukertaa markkinoidaan selkeästi ja ohje myös sen rekisteröitymiseen annetaan.\n\n**johtopäätös**: sivulla tarjotaan ilmainen kokeilukerta lasten tanssiharrastukseen helsingissä.",
-    "last_checked": "2025-11-24"
+    "ai_comment": "kyllä – sivulla mainitaan selvästi:  \n\"lasten tanssikursseilla on käytössä yksi ilmainen kokeilukerta. kurssipaikan voi perua sähköpostitse ennen toista kurssikertaa. toisen kurssikerran jälkeen ilmoittautumiset ovat sitovia ja vahvistettua kurssipaikkaa ei voi perua. myös kokeilukerralle ilmoittaudutaan myclubin kurssi-ilmoittautumisen kautta, jotta kurssilaisten määrää voidaan tarpeen mukaan rajoittaa, ja kurssilainen vastaanottaa kurssiin liittyvät viestit.\"\n\ntämä täyttää ehdot koskien ilmaista kokeilukertaa tai maksutonta tutustumista harrastukseen helsingissä.",
+    "last_checked": "2025-12-01"
   },
   {
     "name": "https://heatgym.fi/ilmainen-kokeilukerta/",
     "website": "https://heatgym.fi/ilmainen-kokeilukerta/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
     "category": "kuntosali",
-    "ai_comment": "kyllä – selitys: sivuotsikko sekä sivulla toistuvasti on maininta \"ilmainen kokeilukerta\", mikä viittaa selkeästi ilmaiseen kokeiluun/tutustumiseen heat gymissä. vaikka tekstissä ei ole tarkkoja ehtoja tai ohjeita, sivu kuitenkin täyttää ehdot: otsikossa lukee \"ilmainen kokeilukerta\" ja se viittaa ilmaiseen kokeiluun helsingissä (heat gymillä).",
-    "last_checked": "2025-11-24"
+    "ai_comment": "kyllä – sivun otsikkona on \"ilmainen kokeilukerta\" ja tekstissä mainitaan selvästi, että kyseessä on ilmainen kokeilukerta heat gymin toimintana. näillä perusteilla sivu täyttää hyväksynnän kriteerit: otsikossa lukee \"ilmainen kokeilukerta\" ja edes osa tekstistä (eli otsikko) viittaa ilmaiseen kokeiluun.",
+    "last_checked": "2025-12-01"
   },
   {
-    "name": "https://kodarit.com/fi/ilmainen-kokeilu/",
-    "website": "https://kodarit.com/fi/ilmainen-kokeilu/",
+    "name": "https://helpotnopat.fi/MOOC.html",
+    "website": "https://helpotnopat.fi/MOOC.html",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
     "category": "muut",
-    "ai_comment": "kyllä – selitys:\n\nsivulla mainitaan useissa kohdissa aivan selkeästi \"ilmainen kokeilukerta\" sekä \"ilmaiselle kokeilutunnille\". lisäksi otsikossa, navigaatiossa ja varsinaisessa tekstissä korostetaan, että voit tulla tutustumaan koodauksen harrastukseen maksutta joko paikan päälle helsingissä tai etänä. myös ilmoittautumisessa puhutaan kokeilutunnista, joka on ilmainen. sivu täyttää kaikki hyväksymisen kriteerit ja tarjoaa nimenomaan ilmaisen kokeilukerran harrastukseen helsingissä.",
-    "last_checked": "2025-11-24"
+    "ai_comment": "kyllä – selitys:\n\nsivulla https://helpotnopat.fi/mooc.html mainitaan useassa kohdassa seuraavaa:\n\n- otsikossa ja tekstissä painotetaan **ilmaisia kaikille avoimia nettikursseja eli mooceja**. \n- tekstissä toistuu, että kurssit ovat \"**ilmaiset**, kaikille avoimet\", \"jyvã¤skylã¤n avoimen yliopiston kaikille **avoimet ja ilmaiset** kurssit\", \"helsingin yliopiston **kaikille avoimet verkkokurssit**\", \"kaikille avoimet mooc-kurssit\".\n- koko sivu on kooste tällaisista maksuttomista mooc-opinnoista, joita voi kokeilla ja suorittaa ilman maksua.\n- kyseessä ei ole keskustelupalsta, kampaamo/parturi/kauneuspalvelu. ei myöskään kaupungin harrastus- tai infopalvelu, vaan yksityinen opiskelijaopas.\n- monien kurssien kohdalla korostetaan hyödynnettävyyttä esimerkiksi yliopisto-opintoihin.\n\nnäiden perusteella sivu selvästi tarjoaa maksutonta kokeilua/harrastamista eli ilmaisen tutustumisen netti- ja mooc-kursseihin, jotka ovat myös helsingissä asuville avoimia. sivu täyttää hyväksymiskriteerit selvästi.\n\nvastaus:  \n**kyllä – sivu tarjoaa ilmaisen tutustumisen/harrastamisen mahdollisuuden (ilmaiset mooc-kurssit).**",
+    "last_checked": "2025-12-01"
   },
   {
-    "name": "https://trib3.fi/ensikertalaisille/",
-    "website": "https://trib3.fi/ensikertalaisille/",
+    "name": "https://joogit.fi/osta/heimo-jasenyys-free/",
+    "website": "https://joogit.fi/osta/heimo-jasenyys-free/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
     "category": "ryhmäliikunta",
-    "ai_comment": "kyllä – selitys:\n\nsivulla mainitaan useaan otteeseen selkeästi ilmaisen kokeilukerran/treenin tarjoamisesta ensikertalaisille. esimerkiksi lauseet:\n- \"kokeile nyt ilmaiseksi\"\n- \"rekisteröidy varataksesi paikan ensimmäiselle treenille. se on ilmaista!\"\n- \"varaa ensimmäinen tuntisi ilmaiseksi.\"\n\nnämä täyttävät hyväksymiskriteerit, joten sivu tarjoaa ilmaisen kokeilukerran/treenin helsingissä.",
-    "last_checked": "2025-11-24"
+    "ai_comment": "kyllä – selitys:\n\nsivu tarjoaa **7 päivän ilmaisen kokeilujakson** joogapalveluun. tämä ilmenee useista kohdista tekstissä:\n\n- otsikossa ja useissa kohdissa lukee \"ilmainen kokeilu 7 päivää\" sekä \"aloita 7 päivän ilmainen kokeilu\".\n- tilauksessa on tuote \"heimo kokeilu - 7 päivää × 1 ilmainen kokeilu!\" ja kokonaissumma on €0,00 – mikä osoittaa, että kokeilujakso on maksuton.\n- tekstissä sanotaan suoraan: \"kokeilujakso ei sido mihinkään, eikä sinua veloiteta sen jälkeen.\"\n- sivun sisältö ei liity kampaamoon, kauneudenhoitoon, laihdutukseen eikä kaupungin infopalveluun, vaan joogaan ja liikuntapalveluun.\n\nnämä täyttävät kaikki hyväksymiskriteerit: kokeilujakso on ilmainen ja palveluun saa rekisteröitymällä maksuttoman tutustumisjakson.",
+    "last_checked": "2025-12-01"
   },
   {
-    "name": "https://www.hel.fi/en/health-and-social-services/gyms-at-service-centres",
-    "website": "https://www.hel.fi/en/health-and-social-services/gyms-at-service-centres",
+    "name": "https://tfwstadi.com/",
+    "website": "https://tfwstadi.com/",
+    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+    "category": "ryhmäliikunta",
+    "ai_comment": "kyllä – selitys:\n\nsivulla mainitaan sekä otsikossa että tekstissä useita kertoja, että he tarjoavat ilmaisen kokeilutunnin:\n\n- \"varaa ilmainen kokeilutunti\"\n- \"jos kuitenkin haluat kokeilla ennen ostopäätöstä, niin varaa itsellesi ilmainen kokeilutunti!\"\n- lisäksi varausjärjestelmästä löytyy mahdollisuus varata kokeilutunti.\n\nsivun sisältö täyttää selvästi kriteerit: ilmaisuus tuodaan esiin sekä otsikoissa että tekstissä, ja kyseessä on liikuntaharrastuksen kokeilu helsingissä – ei esimerkiksi kampaamo, laihdutuspalvelu tai infopalvelu.\n\n**yhteenveto:** sivulta saa selvästi ilmaisen kokeilutunnin/treenin, joten se hyväksytään.",
+    "last_checked": "2025-12-01"
+  },
+  {
+    "name": "https://www.bookbeat.com/fi",
+    "website": "https://www.bookbeat.com/fi",
+    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
+    "category": "taiteet",
+    "ai_comment": "kyllä – selitys:\n\nsivulla https://www.bookbeat.com/fi mainitaan useissa kohdissa selkeästi ilmainen kokeilujakso (\"kokeile bookbeatia maksutta\", \"kokeilujakson aikana saat käyttöösi basic-paketin, jolla voit kuunnella ja lukea yhteensä 20 tuntia veloituksetta.\", \"kaikki uudet asiakkaat saavat kokeilla bookbeatia maksutta.\", \"kokeile 30 päivää maksutta\", \"kuuntele äänikirjoja 30 päivää maksutta\"). rekisteröityminen johtaa ilmaiseen kokeiluun. sivu täyttää useamman hyväksymiskriteerin. \n\nvastaus:  \n**kyllä** – sivu tarjoaa selkeästi ilmaisen kokeilujakson, joten se hyväksytään.",
+    "last_checked": "2025-12-01"
+  },
+  {
+    "name": "https://www.elixia.fi/artikkelit/sinulla-on-ilmainen-kokeilukerta-personal-trainerille",
+    "website": "https://www.elixia.fi/artikkelit/sinulla-on-ilmainen-kokeilukerta-personal-trainerille",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
     "category": "kuntosali",
-    "ai_comment": "kyllä – selitys:  \nsivu kertoo, että kuntosalien käyttö palvelukeskuksissa on maksutonta (\"using the gym is free of charge.\"). lisäksi palvelukeskuskortin saa ilmaiseksi (\"you can get a card free of charge from the service centres' information desk.\"). vaikka kyseessä ei ole rajattu \"kokeilukerta\", vaan kuntosalin käyttö kokonaisuudessaan on maksutonta tietyille ryhmille (eläkeläiset ja työttömät helsingissä), tämä täyttää kriteerin ilmaisen harrastukseen tutustumisen ja käyttämisen osalta. sivu ei rajoitu kauneuspalveluihin, eikä kyseessä ole pelkkä info- tai keskustelupalsta.",
-    "last_checked": "2025-11-24"
+    "ai_comment": "kyllä – sivu tarjoaa ilmaisen kokeilukerran**\n\nselitys:  \nsivun otsikossa sekä sisällössä mainitaan selvästi \"ilmainen\" ja \"veloitukseton pt-kokeilukerta\", joka on varattavissa elixia-sovelluksesta tai keskuksen vastaanotosta. tekstissä sanotaan myös: \"varaa ilmainen pt-kokeilukerta elixia-sovelluksesta tai keskuksen vastaanotosta.\" tämä tarkoittaa, että tarjolla on ilmainen kokeilukerta personal trainerin kanssa, mikä täyttää hyväksymiskriteerit (ilmainen kokeilu, free trial, kokeile maksutta jne.).\n\nvastaus: **kyllä – sivu tarjoaa ilmaisen kokeilukerran personal trainer -palveluun helsingissä.**",
+    "last_checked": "2025-12-01"
   },
   {
-    "name": "https://www.liikku.fi/english/",
-    "website": "https://www.liikku.fi/english/",
+    "name": "https://www.foreverclub.fi/kolme_paivaa/",
+    "website": "https://www.foreverclub.fi/kolme_paivaa/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
     "category": "kuntosali",
-    "ai_comment": "kyllä – selitys:\n\nsivulla mainitaan useaan otteeseen (\"try us out for free\", \"one free trial session (monday – wednesday, 16:00 – 19:00)\", \"find out if liikku’s the one for you by coming along for your free trial workout session\", \"free trial workout session\"), että kuntokeskus liikku tarjoaa ilmaisen kokeilukerran (free trial) kaikille, jotka haluavat kokeilla kuntosalia helsingissä (sekä muissa kaupungeissa). ilmainen tutustumiskerta on tarjolla maanantaista keskiviikkoon klo 16–19, ja tämä mainitaan sekä englanniksi että suomeksi sivun tekstissä. sivu siis täyttää kaikki vaatimukset ilmaisen kokeilukerran tarjoamisesta.",
-    "last_checked": "2025-11-24"
+    "ai_comment": "kyllä – selitys:\n\nsivulla mainitaan useaan otteeseen, että liittymällä jäseneksi voi \"treenata ensimmäiset 4 viikkoa 0 €\", eli ensimmäinen neljän viikon jakso on ilmainen (esim. kohdissa: \"treenaa ensimmäiset 4 viikkoa 0 €\", sekä black friday -tarjous: \"toistaiseksi voimassa olevat jäsenyydet basic- ja premium-jäsenyydet: 0 € / 4 viikkoa\"). \n\ntämä täyttää kriteerin:\n- \"ensimmäinen treeni, viikko tai peruskurssi on ilmainen\"\n- sekä nokkelasti myös \"free trial\" -tulkinnan, koska jäsenyys on mahdollista aloittaa ilman ensimmäisen 4 viikon maksua.\n\nmyös rekisteröityminen (jäseneksi liittyminen) johtaa ilmaiseen kokeilujaksoon.\n\nkyseessä on liikuntakeskus eikä mikään kielletty palvelu- tai tietosivukategoria.\n\nsiksi vastaus on:\n**kyllä – forever club tarjoaa ilmaisen kokeilujakson (4 viikkoa) liikuntaharrastuksen aloittamiseen helsingissä.**",
+    "last_checked": "2025-12-01"
   },
   {
-    "name": "https://www.motivus.fi/en",
-    "website": "https://www.motivus.fi/en",
+    "name": "https://www.hypoxi.fi/varaa-maksuton-kokeilukerta/",
+    "website": "https://www.hypoxi.fi/varaa-maksuton-kokeilukerta/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
     "category": "kuntosali",
-    "ai_comment": "kyllä – selitys:\n\nsivun tekstissä mainitaan: \"read more in the attached article and book yourself a free trial class!\" tämä viittaa siihen, että sivun kävijällä on mahdollisuus varata maksuton kokeilutunti (“free trial class”). tämä täyttää hyväksymiskriteerit, koska ilmaista kokeilua tarjotaan ryhmäliikunnasta kiinnostuneille.\n\nnäin ollen sivu hyväksytään, koska siinä mainitaan ilmainen kokeilukerta (“free trial class”), joka on saatavilla helsingissä motivuksen toimintojen puitteissa.",
-    "last_checked": "2025-11-24"
+    "ai_comment": "kyllä – sivulla sekä otsikossa että tekstissä mainitaan \"maksuton kokeilukerta\" (ilmainen kokeilukerta) ja \"varaa aikasi maksuttomaan kokeilukertaan, joka sisältää laitekokeilun\". eli sivulla tarjotaan ilmainen tutustumiskerta hypoxi-menetelmään helsingissä (ja muillakin paikkakunnilla). sivun sisältö täyttää hyväksymiskriteerit: siellä viitataan selkeästi ilmaiseen kokeiluun/harrastukseen.",
+    "last_checked": "2025-12-01"
   },
   {
-    "name": "https://www.movetladies.fi/hinnasto/",
-    "website": "https://www.movetladies.fi/hinnasto/",
+    "name": "https://www.liikku.fi/tutustu-liikkuun-ilmaiseksi/",
+    "website": "https://www.liikku.fi/tutustu-liikkuun-ilmaiseksi/",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
     "category": "kuntosali",
-    "ai_comment": "kyllä – sivulla mainitaan selkeästi useassa kohdassa, että voi \"kokeilla 3x ilmaiseksi\" ja \"lataa passi ja kokeile 3 kertaa maksutta\". sivu siis tarjoaa ilmaisen kokeilukerran/treenin (3 kappaletta), ja ohjeet ilmaisen kokeilun saamiseen ovat tarjolla. tämä täyttää hyväksymisen ehdot.",
-    "last_checked": "2025-11-24"
+    "ai_comment": "kyllä – selitys\n\nsivulla mainitaan selvästi useaan otteeseen, että \"tutustuminen on ilmaista\", \"ilmaisella testitreenillä voi käydä kerran\", ja \"try us out for free\". lisäksi kerrotaan, että tutustumistreeniin ei tarvitse ilmoittautua etukäteen, vaan riittää, että saavut paikalle, täytät yhteystietosi ja aloitat treenin. tämä täyttää kriteerin ilmaisen kokeilukerran tarjoamisesta kuntosalilla helsingissä (liikku-ketjulla on toimipiste myös helsingissä), eikä mikään kriteereistä kiellä tämän tyyppistä palvelua.\n\nnäin ollen:\n**kyllä – sivu tarjoaa ilmaisen tutustumiskäynnin/kokeilukerran treenaamiseen kuntosalilla helsingissä.**",
+    "last_checked": "2025-12-01"
   },
   {
-    "name": "https://www.ptsalit.fi/p-t-fitness-clubs",
-    "website": "https://www.ptsalit.fi/p-t-fitness-clubs",
+    "name": "https://www.unisport.fi/fi/ilmainen-tutustumiskaynti",
+    "website": "https://www.unisport.fi/fi/ilmainen-tutustumiskaynti",
     "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
     "category": "kuntosali",
-    "ai_comment": "kyllä – selitys:\nsivulla mainitaan selkeästi seuraava kohta:  \n\"you can try the p&t fitness club of your interest for free with a 1-day trial membership by selecting the product 'trial membership - free' in the online store.\"  \nlisäksi suomenkielisessä navigaatiossa on kohta \"kokeile veloituksetta\", eli ilmaista kokeilukertaa tarjotaan selkeästi.\n\ntarjolla on siis ilmainen yhden päivän tutustuminen p&t fitness clubiin helsingissä (useita toimipisteitä). \n\nsivu täyttää hyväksymiskriteerit.",
-    "last_checked": "2025-11-24"
-  },
-  {
-    "name": "https://www.unisport.fi/en/free-first-visit",
-    "website": "https://www.unisport.fi/en/free-first-visit",
-    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "category": "kuntosali",
-    "ai_comment": "kyllä - selitys:  \nsivulla otsikossa ja tekstissä mainitaan selkeästi \"free first visit\" ja kerrotaan, että uusille asiakkaille ensimmäinen käynti unisport-keskuksessa on ilmainen. teksti ohjeistaa käyttämään promokoodia \"freevisit\" ilmaisen käynnin lunastamiseen. tämä täyttää hyväksymiskriteerit: ensimmäinen käynti (treeni) on ilmainen ja kyseessä on selvästi maksuton tutustuminen liikuntaharrastukseen helsingissä.",
-    "last_checked": "2025-11-24"
-  },
-  {
-    "name": "https://myhub.fi",
-    "website": "https://myhub.fi",
-    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "category": "kuntosali",
-    "ai_comment": "kyllä - selitys:  \nsivulla otsikossa ja tekstissä mainitaan selkeästi \"free first visit\" ja kerrotaan, että uusille asiakkaille ensimmäinen käynti on ilmainen. ",
-    "last_checked": "2025-11-26"
-  },
-  {
-    "name": "https://meidokan.fi/judo/uutiset/meido-kan-kaynnistaa-maksuttoman-judon-peruskurssin-tule-mukaan-ja-tuo-ystavasikin/",
-    "website": "https://meidokan.fi/judo/uutiset/meido-kan-kaynnistaa-maksuttoman-judon-peruskurssin-tule-mukaan-ja-tuo-ystavasikin/",
-    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "category": "kamppailulajit",
-    "ai_comment": "kyllä - selitys:  \nsivulla otsikossa ja tekstissä mainitaan selkeästi \"free first visit\" ja kerrotaan, että uusille asiakkaille ensimmäinen käynti on ilmainen. ",
-    "last_checked": "2025-11-26"
-  },
-  {
-    "name": "https://www.finnaiki.fi/kokeile-ilmaiseksi-kaksi-kertaa",
-    "website": "https://www.finnaiki.fi/kokeile-ilmaiseksi-kaksi-kertaa",
-    "offer_type": "Ilmainen kokeilukerta (AI tunnistama)",
-    "category": "kamppailulajit",
-    "ai_comment": "kyllä - selitys:  \nsivulla otsikossa ja tekstissä mainitaan selkeästi \"free first visit\" ja kerrotaan, että uusille asiakkaille ensimmäinen käynti on ilmainen. ",
-    "last_checked": "2025-11-26"
+    "ai_comment": "kyllä – selitys:\n\nsivulla mainitaan useaan otteeseen selvästi, että kyseessä on ilmainen tutustumiskäynti. otsikossa lukee \"ilmainen tutustumiskäynti\". lisäksi tekstissä kerrotaan: \"ensimmäinen treeni uusille asiakkaille on ilmainen. kampanjakoodilla 'freevisit' voit lunastaa ensimmäisen ilmaisen kertakäynnin, jolla pääset tutustumaan unisportin liikuntakeskuksiin.\" tämä täyttää vaatimuksen ilmaisesta kokeilusta tai free trialista liikuntapalveluun helsingissä. \n\nsivu siis selvästi tarjoaa ilmaisen kokeilukerran/treenin.",
+    "last_checked": "2025-12-01"
   }
 ]
